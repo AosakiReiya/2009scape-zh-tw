@@ -52,9 +52,34 @@ LLM 翻譯需人工審校，重點：
 
 ### 4. 匯入
 
-- 伺服器端：翻譯表掛載到攔截器（Phase 3，待實作）
-- JSON config：`tools/translate_jsons.py` 回寫
-- cache：需 cache 編輯工具（Phase 2 待決定方向）
+- **伺服器端（對話/訊息/介面文字）**：翻譯表已由 `Translation` 攔截器
+  （`2009scape-zh-tw-server` 的 `core/api/Translation.kt`）從
+  `data/configs/translations_zh-tw.json` 載入。將翻譯表轉為 en→zh-tw JSON 物件：
+  ```bash
+  python3 - << 'EOF'
+  import json
+  table = json.load(open("translations/zh-tw/strings.json"))
+  out = {e["en"]: e["zh-tw"] for e in table if e.get("zh-tw")}
+  json.dump(out, open("<server>/Server/data/configs/translations_zh-tw.json","w",encoding="utf-8"), ensure_ascii=False, indent=2)
+  EOF
+  ```
+- **JSON config**：`tools/translate_jsons.py` 回寫（道具/NPC/商店名）
+- **cache**：需 cache 編輯工具（Phase 2 待決定方向）
+
+### 5. 攔截器機制
+
+伺服器端 `Translation` 攔截三個文字出口：
+
+| 出口 | 檔案 | 說明 |
+|---|---|---|
+| 對話 | `DialogueInterpreter.doSubstitutions` | NPC/玩家對話文字 |
+| 系統訊息 | `PacketDispatch.sendMessage` | 遊戲訊息 |
+| 介面文字 | `PacketDispatch.sendString` | 介面動態文字（多詞句才翻，避免誤翻玩家名/數量） |
+
+翻譯規則：
+- 精確命中翻譯表 → 直接替換
+- 含 `<col=...>` 標籤 → 剝除後查表、翻譯後還原
+- `requirePhrase=true` 時僅多詞句翻譯（過濾玩家名/數字）
 
 ## 術語表
 

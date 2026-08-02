@@ -37,3 +37,6 @@ Thumbs.db
 
 # Local config
 *.local
+
+# dev dependency
+tmp/

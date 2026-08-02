@@ -2,6 +2,24 @@
 
 本文記錄 2009scape 遊戲內容的實際來源，這是決定漢化策略的關鍵。
 
+## 原始碼對應關係
+
+| 漢化 repo | 官方基底 | 基底說明 |
+|---|---|---|
+| `rt4-client-zh-tw` | GitLab `2009scape/rt4-client` master | 已重命名的反混淆用戶端，與單機版 `client.jar` 對應 |
+| `2009scape-zh-tw-server` | GitLab `2009scape/2009scape` master | Kotlin 伺服器；以 Gradle 建置（替代 Maven，相容低資源環境） |
+| 本 repo | - | 翻譯表、工具、文件（跨兩專案共用） |
+
+> **伺服器建置注意**：
+> - 使用 `Server/build.gradle`（Gradle 7.4.2 + JDK 11）替代 Maven，因 kotlin-maven-plugin
+>   在低資源/WSL 環境易因 Kotlin daemon 記憶體不足而失敗。
+> - `Server/gradle.properties` 設定 `kotlin.daemon.jvmargs=-Xmx2g`。
+> - `Server/libs/ConstLib-1.4.24.jar` 為官方所需版本（GitLab Maven 下載），
+>   pom 的 `[1.4.0,)` 範圍會解析到此版本。
+
+> 註：`Pazaz/RT4-Client`（GitHub）是第三方 fork，其 `2025-deob`/`2026-deob`
+> 分支為未重命名的反混淆版本，**不適合**作為漢化基底。
+
 ## 結論
 
 **不是所有內容都來自伺服器。** 2009scape 的內容分佈在三個來源：
