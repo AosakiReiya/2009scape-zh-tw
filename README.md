@@ -21,6 +21,20 @@ GitHub / GitLab
 | `2009scape-zh-tw-server` | 官方 GitLab `2009scape/2009scape` master | 伺服器原始碼 + zh-tw 攔截器 |
 | `2009scape-zh-tw` | - | 翻譯表、術語表、萃取/建置工具、文件 |
 
+## 本機工作區佈局
+
+三個 repo 平級放在同一工作區資料夾（如 `2009scape-zh-tw-workspace/`），
+與遊戲目錄分開：
+
+```
+2009scape-zh-tw-workspace/
+├── 2009scape-zh-tw/          ← 本 repo（門戶）
+├── rt4-client-zh-tw/         ← 用戶端 fork（zh-tw 分支）
+└── 2009scape-zh-tw-server/   ← 伺服器 fork（zh-tw 分支）
+```
+
+工具腳本預設從 `../rt4-client-zh-tw`、`../2009scape-zh-tw-server` 建置。
+
 ## 授權
 
 AGPL-3.0（與上游一致）。三個 repo 皆繼承上游授權。

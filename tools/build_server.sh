@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 建置漢化伺服器（2009scape-zh-tw-server）
 #
-# 從本機 fork 工作樹（work/2009scape-zh-tw-server，zh-tw 分支）或
+# 從平級 fork 工作樹（2009scape-zh-tw-server，zh-tw 分支）或
 # 指定 FORK_DIR 建置。使用 Gradle（替代 Maven，相容低資源環境）。
 #
 # 用法：
@@ -9,7 +9,7 @@
 #
 # 環境變數：
 #   PROXY             HTTP 代理（如 http://127.0.0.1:7890）
-#   FORK_DIR          漢化 fork 工作樹路徑（預設 work/2009scape-zh-tw-server）
+#   FORK_DIR          漢化 fork 工作樹路徑（預設 ../2009scape-zh-tw-server）
 #   JAVA_HOME         JDK 11 路徑（未設則自動下載）
 
 set -euo pipefail
@@ -19,12 +19,16 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 WORK="$ROOT_DIR/work"
 mkdir -p "$WORK"
 
+# 平級 fork 工作樹（工作區根的上層）
+WORKSPACE_ROOT="$(dirname "$ROOT_DIR")"
+DEFAULT_FORK="$WORKSPACE_ROOT/2009scape-zh-tw-server"
+
 CURL_ARGS=()
 [ -n "${PROXY:-}" ] && CURL_ARGS=(-x "$PROXY")
 download() { echo ">> 下載 $2 ..."; curl "${CURL_ARGS[@]}" -sL -o "$2" "$1"; }
 
 # ---- 1. fork 工作樹 ----
-FORK_DIR="${FORK_DIR:-$WORK/2009scape-zh-tw-server}"
+FORK_DIR="${FORK_DIR:-$DEFAULT_FORK}"
 if [ ! -d "$FORK_DIR/Server/src" ]; then
   echo ">> 找不到 fork 工作樹：$FORK_DIR" >&2
   echo "   請 clone 漢化 fork（2009scape-zh-tw-server）的 zh-tw 分支到該路徑，或指定 --fork-dir" >&2

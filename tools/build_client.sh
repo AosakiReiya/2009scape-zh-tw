@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 建置漢化用戶端（rt4-client-zh-tw）
 #
-# 從本機 fork 工作樹（work/rt4-client-zh-tw，zh-tw 分支）或
+# 從平級 fork 工作樹（rt4-client-zh-tw，zh-tw 分支）或
 # 指定 FORK_DIR 建置。若無本地工作樹，自動 clone 官方基底 + 套用 zh-tw。
 #
 # 用法：
@@ -9,7 +9,7 @@
 #
 # 環境變數：
 #   PROXY             HTTP 代理（如 http://127.0.0.1:7890）
-#   FORK_DIR          漢化 fork 工作樹路徑（預設 work/rt4-client-zh-tw）
+#   FORK_DIR          漢化 fork 工作樹路徑（預設 ../rt4-client-zh-tw）
 #   UPSTREAM_URL      官方 GitLab rt4-client master tar.gz
 #   JAVA_HOME         JDK 11 路徑（未設則自動下載）
 
@@ -20,12 +20,16 @@ ROOT_DIR="$(dirname "$SCRIPT_DIR")"
 WORK="$ROOT_DIR/work"
 mkdir -p "$WORK"
 
+# 平級 fork 工作樹（工作區根的上層）
+WORKSPACE_ROOT="$(dirname "$ROOT_DIR")"
+DEFAULT_FORK="$WORKSPACE_ROOT/rt4-client-zh-tw"
+
 CURL_ARGS=()
 [ -n "${PROXY:-}" ] && CURL_ARGS=(-x "$PROXY")
 download() { echo ">> 下載 $2 ..."; curl "${CURL_ARGS[@]}" -sL -o "$2" "$1"; }
 
 # ---- 1. fork 工作樹 ----
-FORK_DIR="${FORK_DIR:-$WORK/rt4-client-zh-tw}"
+FORK_DIR="${FORK_DIR:-$DEFAULT_FORK}"
 if [ ! -d "$FORK_DIR/client/src" ]; then
   echo ">> 找不到 fork 工作樹，建立 $FORK_DIR ..."
   UPSTREAM_URL="${UPSTREAM_URL:-https://gitlab.com/2009scape/rt4-client/-/archive/master/rt4-client-master.tar.gz}"
