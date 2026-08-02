@@ -19,7 +19,7 @@ public class TestCJK {
         int x = 10;
         for (int i = 0; i < text.length(); ) {
             int cp = text.codePointAt(i);
-            x += CJKRenderer.drawGlyph(cp, x, 80);
+            x += CJKRenderer.drawGlyph(cp, x, 80, 14);
             i += Character.charCount(cp);
         }
         java.awt.image.BufferedImage img = new java.awt.image.BufferedImage(w, h, java.awt.image.BufferedImage.TYPE_INT_RGB);
