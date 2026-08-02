@@ -1,0 +1,38 @@
+[
+  {
+    "en": "Ho Ho Ho!",
+    "zh-tw": "呵呵呵！",
+    "source": "content/global/worldevents/holiday/christmas/randoms/SantaHolidayRandomDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Merry Christmas, ",
+    "zh-tw": "聖誕快樂，",
+    "source": "content/global/worldevents/holiday/christmas/randoms/SantaHolidayRandomDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, please.",
+    "zh-tw": "好的，請。",
+    "source": "content/global/worldevents/holiday/christmas/randoms/SantaHolidayRandomDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "No, thanks.",
+    "zh-tw": "不用了，謝謝。",
+    "source": "content/global/worldevents/holiday/christmas/randoms/SantaHolidayRandomDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You need a higher level to use this item.",
+    "zh-tw": "你需要的等級還不夠，無法使用這個道具。",
+    "source": "core/game/node/entity/player/Player.java",
+    "status": "translated"
+  },
+  {
+    "en": "Welcome to RuneScape.",
+    "zh-tw": "歡迎來到 RuneScape。",
+    "source": "core/game/node/entity/player/Player.java",
+    "status": "untranslated"
+  }
+]
