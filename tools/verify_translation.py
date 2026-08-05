@@ -107,6 +107,13 @@ def load_server_keys(path):
     return set(json.load(open(path, encoding='utf-8')).keys())
 
 
+def covered(s, existing):
+    """s 或剝除前綴顏色標籤後的 body 是否已翻譯。"""
+    if s in existing:
+        return True
+    body = re.sub(r'^(<col=[0-9a-fA-F]+>|<shad(=-?[0-9]+)?>|</col>|</shad>)+', '', s)
+    return body != s and body in existing
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache", required=True, help="cache 目錄（含 main_file_cache.*）")
@@ -143,7 +150,7 @@ def main():
             if not data:
                 continue
             for s in ascii_strs(data):
-                if is_junk(s) or s in existing or s in seen:
+                if is_junk(s) or covered(s, existing) or s in seen:
                     continue
                 seen.add(s)
                 missing.append(("iface", s))
@@ -163,7 +170,7 @@ def main():
             if not data:
                 continue
             for s in ascii_strs(data):
-                if is_junk(s) or s in existing or s in seen:
+                if is_junk(s) or covered(s, existing) or s in seen:
                     continue
                 seen.add(s)
                 missing.append(("cs2", s))
