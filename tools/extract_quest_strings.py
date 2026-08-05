@@ -127,16 +127,30 @@ def parse_expr(expr):
     return parts, has_var
 
 
-def resolve_quest_expr(expr, is_line):
-    """還原 sendString/line 的完整執行期字串。含變數回傳 None。"""
+def resolve_quest_expr(expr, method, nargs):
+    """還原 sendString/line 的完整執行期字串。含變數回傳 None。
+
+    line() helper 流程：
+      - 3-arg line(player, msg, line)：send = BLUE + msg（含 ---//-- 等）→ 呼叫 4-arg
+      - 4-arg line(player, msg, line, crossed)：send = BLUE + msg（含 !!??%%&&）→ sendString
+      因此 3-arg 呼叫執行期前置「兩次」BLUE；直接 4-arg 前置「一次」。
+    """
     parts, has_var = parse_expr(expr)
     if has_var:
         return None
     s = ''.join(parts)
-    if is_line:
-        # line() helper：前置 BLUE + 替換
-        s = '<col=08088A>' + s.replace('<n>', '<br><br>').replace('<blue>', '<col=08088A>').replace('<red>', '<col=8A0808>')
-        s = s.replace('!!', '<col=8A0808>').replace('??', '<col=08088A>').replace('%%', '<col=FF0000>').replace('&&', '<col=08088A>')
+    if method == 'line':
+        if nargs >= 4:
+            # 直接 4-arg：前置一次 BLUE + !!??%%&&
+            s = '<col=08088A>' + s
+            s = s.replace('<n>', '<br><br>').replace('<blue>', '<col=08088A>').replace('<red>', '<col=8A0808>')
+            s = s.replace('!!', '<col=8A0808>').replace('??', '<col=08088A>').replace('%%', '<col=FF0000>').replace('&&', '<col=08088A>')
+        else:
+            # 3-arg：前置兩次 BLUE，含 ---//-- 與 !!??%%&&
+            s = '<col=08088A><col=08088A>' + s
+            s = s.replace('<n>', '<br><br>').replace('<blue>', '<col=08088A>').replace('<red>', '<col=8A0808>')
+            s = s.replace('---', '<col=000000><str>').replace('/--', '<col=08088A>')
+            s = s.replace('!!', '<col=8A0808>').replace('??', '<col=08088A>').replace('%%', '<col=FF0000>').replace('&&', '<col=08088A>')
     return s
 
 
@@ -166,8 +180,7 @@ def extract_file(path):
         args, end = extract_call_args(src, m.end() - 1)
         # line(player, EXPR, ...) 第 1 參數是 player；sendString(EXPR, ...) 第 1 參數是字串
         expr = args[1] if fn == 'line' and len(args) > 1 else (args[0] if args else '')
-        is_line = fn == 'line'
-        resolved = resolve_quest_expr(expr, is_line)
+        resolved = resolve_quest_expr(expr, fn, len(args))
         if resolved and looks_sentence(resolved):
             results.append({"en": resolved, "zh-tw": "", "source": rel,
                             "status": "untranslated", "method": fn})
