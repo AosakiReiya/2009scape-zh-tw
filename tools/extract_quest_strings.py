@@ -35,7 +35,9 @@ GLOBALS_COLORS = {
 }
 
 # 呼叫模式：sendString(EXPR, ...) / line(player, EXPR, ...) / sendDialogue(EXPR) ...
-CALL_RE = re.compile(r'\b(sendString|line|sendDialogue|sendDialogue2|sendPlainMessage|sendItemMessage|sendItemDialogue|sendDoubleItemDialogue)\(', re.S)
+# 對話方法：npc/npcl/player/playerl/statement/options（字串參數為對話訊息/選項）
+CALL_RE = re.compile(r'\b(sendString|line|sendDialogue|sendDialogue2|sendPlainMessage|sendItemMessage|sendItemDialogue|sendDoubleItemDialogue|npc|npcl|player|playerl|statement|options|sendNPCDialogue|sendPlayerDialogue)\(', re.S)
+DIALOGUE_METHODS = {'npc', 'npcl', 'player', 'playerl', 'statement', 'options', 'sendNPCDialogue', 'sendPlayerDialogue'}
 
 
 def extract_call_args(src, start):
@@ -178,6 +180,14 @@ def extract_file(path):
     for m in CALL_RE.finditer(src):
         fn = m.group(1)
         args, end = extract_call_args(src, m.end() - 1)
+        if fn in DIALOGUE_METHODS:
+            # 對話方法：萃取字串參數 → 組合完整句子；無法組合的片段標記 concat（translate_batch 跳過）
+            for s, is_frag in extract_dialogue_strings(args):
+                if s and looks_sentence(s):
+                    results.append({"en": s, "zh-tw": "", "source": rel,
+                                    "status": "untranslated", "method": fn,
+                                    "fragment_type": ("concat" if is_frag else None)})
+            continue
         # line(player, EXPR, ...) 第 1 參數是 player；sendString(EXPR, ...) 第 1 參數是字串
         expr = args[1] if fn == 'line' and len(args) > 1 else (args[0] if args else '')
         resolved = resolve_quest_expr(expr, fn, len(args))
@@ -185,6 +195,28 @@ def extract_file(path):
             results.append({"en": resolved, "zh-tw": "", "source": rel,
                             "status": "untranslated", "method": fn})
     return results
+
+
+def extract_dialogue_strings(args):
+    """從對話方法參數萃取字串字面值（支援 + 串接／多行）。
+
+    回傳 [(string, is_fragment), ...]。is_fragment=True 表示該字串可能是不完整
+    片段（不以句號/問號/感嘆號結尾），執行期會與其他字串拼接，不宜單獨翻譯。
+    """
+    out = []
+    for arg in args:
+        parts, has_var = parse_expr(arg)
+        if has_var:
+            continue
+        # 只取純字串片段（非顏色/變數）
+        text = ''.join(p for p in parts if not p.startswith('<col') and p != '')
+        text = text.strip()
+        if not text or len(text) < 3 or not re.search(r'[a-z]', text):
+            continue
+        # 判是否片段：無結尾標點 或 太短 → 可能被拼接
+        frag = bool(not re.search(r'[.?!。！？]["\']?\s*$', text) or len(text) < 12)
+        out.append((text, frag))
+    return out
 
 
 def main():

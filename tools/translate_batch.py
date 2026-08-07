@@ -292,6 +292,17 @@ def main():
             if t:
                 t = sanitize(t)
                 if t:
+                    # 品質 guard：譯文太短（≤2）或純標點 → 疑似錯翻，不採用
+                    if len(entry['en']) >= 12 and (len(t) <= 2 or re.fullmatch(r'[。，、；：？！．.…,;:?!]+', t)):
+                        print(f"!! 第 {offset+1} 條譯文疑似錯翻(過短/純標點)，跳過: {entry['en']}", file=sys.stderr)
+                        continue
+                    # 譯文無中文字元 且 原文是英文句子 → 疑似漏翻，不採用
+                    stripped_en = re.sub(r'<[^>]+>', '', entry['en'])
+                    if not re.search(r'[\u4e00-\u9fff]', t) and re.search(r'[A-Za-z]{3,} [A-Za-z]', stripped_en):
+                        eq = t == entry['en'] or t == stripped_en
+                        if eq or (len(stripped_en) >= 12 and len(t) <= 5):
+                            print(f"!! 第 {offset+1} 條譯文疑似漏翻(無中文)，跳過: {entry['en']} => {t}", file=sys.stderr)
+                            continue
                     entry["zh-tw"] = t
                     entry["status"] = "translated"
                     # 術語迭代：翻譯完成的術語併入 glossary，供後續批次注入
