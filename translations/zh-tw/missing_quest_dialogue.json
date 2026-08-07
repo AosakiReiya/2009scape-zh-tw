@@ -1,0 +1,1970 @@
+[
+  {
+    "en": "...Grrrrr ark.",
+    "zh-tw": "...Grrrrr ark。",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "...I lost the package you gave me.",
+    "zh-tw": "...我弄丟了你給我的包裹。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "...except I don't have it with me...",
+    "zh-tw": "...除了我現在沒帶著它...",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "...no. I am getting ahead of myself. Please take this",
+    "zh-tw": "...不。我操之過急了。請拿取這個",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Aaah... that would be telling adventurer. Anything I",
+    "zh-tw": "Aaah... 那樣就洩密了，冒險者。任何我",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Adventurer... I can only thank you for your kindness,",
+    "zh-tw": "冒險者... 我只能感謝你的好意，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Ah, outerlander... if you wish to become a Fremennik you should try and pay more attention to what people tell you...",
+    "zh-tw": "啊，外來者... 如果你想成為一名弗雷米尼克人，你應該試著多留意人們告訴你的事情...",
+    "source": "ChieftanBrundtDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Ah. You must be",
+    "zh-tw": "啊。你一定是",
+    "source": "AnnaJonesDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ah... well... hmmm... yes...",
+    "zh-tw": "啊... 嗯... 唔... 是的...",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Ahhh, hello there,",
+    "zh-tw": "Ahhh, 你好啊，",
+    "source": "SloaneDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "All work and no play makes",
+    "zh-tw": "只工作不玩耍會使人",
+    "source": "RatBurgissDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Alright, so here's what you gotta do: you need to grab a pole and some bait, and then...",
+    "zh-tw": "好了，所以你要做的是：你需要拿取一根桿子和一些誘餌，然後...",
+    "source": "OttoGodblessedDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "An adventurer hmmm? How lucky. I may have an adventure for you.",
+    "zh-tw": "一名冒險者，嗯？真幸運。我也許有一個冒險要給你。",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "And have you found anything useful?",
+    "zh-tw": "那你有發現任何有用的東西嗎？",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Any treasures this museum knows about it goes to great lengths to acquire.",
+    "zh-tw": "這間博物館會竭盡全力去獲取任何它所知的寶藏。",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Are you",
+    "zh-tw": "你是",
+    "source": "randomChildrenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "As you wish adventurer. I will continue to study this",
+    "zh-tw": "如你所願，冒險者。我會繼續研究這個",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "As you wish,",
+    "zh-tw": "如你所願，",
+    "source": "GrandExchangeClerk.java",
+    "status": "translated"
+  },
+  {
+    "en": "Be warned though. Avan is quite greedy,",
+    "zh-tw": "但要小心。Avan 非常貪婪，",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Be well, warrior",
+    "zh-tw": "保重，戰士",
+    "source": "SloaneDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Before we go any further, I should inform you that you",
+    "zh-tw": "在我們進一步之前，我應該告知你，你",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Best of luck with your quest,",
+    "zh-tw": "祝你的任務好運，",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "But, as our goal as travelling bankers is to make our customers' lives more convenient,",
+    "zh-tw": "但是，由於我們作為旅行銀行家的目標是讓我們的顧客生活更便利，",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "By the way, a little bird told me you got some stuff waiting for you",
+    "zh-tw": "對了，有一隻小鳥告訴我，有一些東西在等你",
+    "source": "EmeraldBenedictDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Can I buy a Skillcape of Runecrafting?",
+    "zh-tw": "我可以買一件符文製作技能斗篷嗎？",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Can you ferry me to",
+    "zh-tw": "你可以載我去",
+    "source": "MariaGunnarsDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Can you teleport me to the rune essence?",
+    "zh-tw": "你可以傳送我到符文精華那裡嗎？",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Centre are tools to help them Moderate",
+    "zh-tw": "中心是幫助他們進行調節的工具",
+    "source": "TownCrierDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Certainly, mortal. Here's",
+    "zh-tw": "當然，凡人。這是",
+    "source": "GhostDiscipleDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Combined with the information I had already collated",
+    "zh-tw": "結合了我已經整理好的資訊",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Crudely put",
+    "zh-tw": "說得直白點",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Did he now? HmmmMMMMMmmmmm.",
+    "zh-tw": "是嗎？嗯嗯嗯嗯嗯嗯嗯。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Dintenta! Sententa! Retenta! Q'exjta! Ia! Sottottott! Ia! Dysmenta junque fammatio svelken! Sottey! Sentey! SOLOMENT!",
+    "zh-tw": "Dintenta! Sententa! Retenta! Q'exjta! Ia! Sottottott! Ia! Dysmenta junque fammatio svelken! Sottey! Sentey! SOLOMENT!",
+    "source": "AlomoneDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Do this thing for me",
+    "zh-tw": "幫我做這件事",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Do you want to buy some runes?",
+    "zh-tw": "你想要買一些符文嗎？",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Each of these gublinches have been caught breaking the rules of",
+    "zh-tw": "這些葛布林奇中的每一個都被抓到違反了",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Errm, yes. But you already have one. Two sieves is a",
+    "zh-tw": "呃，是的。但你已經有一個了。兩個篩子會變成",
+    "source": "ChemistDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Excellent! Allow me to reward you for your work.",
+    "zh-tw": "太棒了！請容我獎勵你的辛勞。",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Fair enough. The offer still stands if you change your mind.",
+    "zh-tw": "有道理。如果你改變主意，這個提議依然有效。",
+    "source": "PenguinKeeperDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Fitzharmon, eh? Hmmm... If I'm not mistaken,",
+    "zh-tw": "Fitzharmon，嗯？唔……如果我沒弄錯的話，",
+    "source": "GemTraderDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "For many years I had assumed them all dead,",
+    "zh-tw": "多年來我一直以為他們全都死了，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "For many years there has been a struggle for power",
+    "zh-tw": "多年來一直存在著權力鬥爭",
+    "source": "ZamorakMageDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Gah! Lousy beggar!",
+    "zh-tw": "嘎！該死的乞丐！",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Good day to you",
+    "zh-tw": "日安",
+    "source": "SirGawainDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Good day to you,",
+    "zh-tw": "日安，",
+    "source": "GrandExchangeClerk.java",
+    "status": "translated"
+  },
+  {
+    "en": "Good day young",
+    "zh-tw": "日安，年輕的",
+    "source": "Ghaslor.java",
+    "status": "translated"
+  },
+  {
+    "en": "Good day, you seem a hearty warrior.",
+    "zh-tw": "日安，你看起來像個強壯的戰士。",
+    "source": "OttoGodblessedDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Good day, you seem to have a keen eye.",
+    "zh-tw": "日安，你看起來目光銳利。",
+    "source": "HuntingExpertRellekkaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Good luck",
+    "zh-tw": "祝你好運",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Good morrow",
+    "zh-tw": "早安",
+    "source": "SirKayDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Graaaaahk raaaawr?",
+    "zh-tw": "Graaaaahk raaaawr?",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Graaahk. Grak grak!",
+    "zh-tw": "Graaahk. Grak grak!",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Graahk grrrrowl?",
+    "zh-tw": "Graahk grrrrowl?",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Grah grr aaaaahk grahk.",
+    "zh-tw": "Grah grr aaaaahk grahk.",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Grar rawr howl!",
+    "zh-tw": "Grar rawr howl!",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Great, can you bake me",
+    "zh-tw": "太好了，你能幫我烤",
+    "source": "RomilyWeaklaxDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Grrrrrk hiss graaaaa!",
+    "zh-tw": "Grrrrrk hiss graaaaa!",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Guards! Take",
+    "zh-tw": "守衛！拿取",
+    "source": "GeneralKhazardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "HA HA HA HA HA! I can tell you are new to this",
+    "zh-tw": "哈哈哈哈哈哈！看得出來你是個新手",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ha! I suppose one of my worthless brothers",
+    "zh-tw": "哈！我想說我那些沒用的兄弟其中之一",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Have you come to laugh at the fight slaves? I used to really enjoy it, but after a while they become quite boring.",
+    "zh-tw": "你是來嘲笑那些戰鬥奴隸的嗎？我以前真的很喜歡看，但過了一陣子後他們就變得相當無聊。",
+    "source": "ALazyGuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hawhaw! 'What's that'",
+    "zh-tw": "哈哈！「那是什麽」",
+    "source": "CaptainLawgofDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "He could do with something to keep his neck warm, standing in",
+    "zh-tw": "他需要一些東西來讓他的脖子保暖，站在",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "He said Dissy had become a really famous man and there was going to be a book about him.",
+    "zh-tw": "他說 Dissy 已經成為一個非常著名的男人，而且將會有一本關於他的書籍。",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hear ye! Hear ye! Player Moderators massive help to",
+    "zh-tw": "聽著！聽著！玩家版主對...有巨大的幫助",
+    "source": "TownCrierDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Hello I am Thormac the Sorcerer,",
+    "zh-tw": "你好，我是法師索馬克，",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello again",
+    "zh-tw": "你好，再次見面",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Hello again,",
+    "zh-tw": "你好，再次見面，",
+    "source": "FranklinCaranosDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello, 'Professor'. Manners cost nothing, you know.",
+    "zh-tw": "你好，「教授」。你知道的，禮貌是不花錢的。",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello, Bwana, do you have the",
+    "zh-tw": "你好，Bwana，你有...嗎",
+    "source": "TrufitusDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Hello, and welcome to the Crafting Guild. Accomplished crafters from all",
+    "zh-tw": "你好，歡迎來到製作公會。來自各地的優秀製作師們",
+    "source": "MasterCrafterDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello. My name is Dimintheis,",
+    "zh-tw": "你好。我的名字是迪明西斯，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello. Welcome to the",
+    "zh-tw": "你好。歡迎來到",
+    "source": "EstateAgentDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Here you can take part in the Player Safety test:",
+    "zh-tw": "在這裡你可以參加玩家安全測試：",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hi, would you like to travel to",
+    "zh-tw": "嗨，你想前往...嗎",
+    "source": "CaptainBentleyDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "High quality gold eh? Hmmm...",
+    "zh-tw": "高品質的金子，嗯？嗯嗯...",
+    "source": "BootDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hmmm, very nice. I'll buy them for",
+    "zh-tw": "嗯，非常好。我會以...的價格買下它們",
+    "source": "SimonTempleton.java",
+    "status": "translated"
+  },
+  {
+    "en": "Hmph. Come back when you have",
+    "zh-tw": "哼。等你有了...再回來吧",
+    "source": "EstateAgentDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "How am I meant to fight a demon who can destroy",
+    "zh-tw": "我該如何去戰鬥一個能摧毀...的惡魔",
+    "source": "GypsyArisDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "How did you get into West Ardougne?",
+    "zh-tw": "你是如何進入西阿爾多內的？",
+    "source": "HeadMournerDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "How did you know my name???",
+    "zh-tw": "你怎麼知道我的名字？？？",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Howl graaahk rawr.",
+    "zh-tw": "Howl graaahk rawr.",
+    "source": "SpiritGraahkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I am a wandering",
+    "zh-tw": "我是一個流浪的",
+    "source": "ArvelDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I am here to retrieve your fragment",
+    "zh-tw": "我是來取回你的碎片",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I am offering a cart ride to",
+    "zh-tw": "我提供前往...的馬車服務",
+    "source": "ShiloCart.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I assume you're looking for your Quest Point Cape? I've placed it",
+    "zh-tw": "我猜你在找你的任務點斗篷？我把它放在了",
+    "source": "WiseOldManDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "I assume you're looking for your Quest Point Hood? I've placed it",
+    "zh-tw": "我猜你在找你的任務點兜帽？我把它放在了",
+    "source": "WiseOldManDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "I assume you're looking for your items? I've placed them",
+    "zh-tw": "我猜你在找你的物品？我把它們放在了",
+    "source": "WiseOldManDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "I be the Jack o' tickets. I exchange the tickets ye collect in the Agility Arena for",
+    "zh-tw": "我是傑克的票券商。我會將你在敏捷競技場收集到的票券兌換成",
+    "source": "PirateJackieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I believe he is staying with a friend",
+    "zh-tw": "我相信他正住在一個朋友家",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I can give you a test paper to take and, once completed,",
+    "zh-tw": "我可以給你一份測試卷讓你拿取，一旦完成後，",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I can't... I lost them...",
+    "zh-tw": "我不能... 我弄丟了...",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "I cannot stay here much longer.",
+    "zh-tw": "我不能在這裡待太久。",
+    "source": "LucienDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I certainly am, and I can see that you are definitely talented enough to own one!",
+    "zh-tw": "我當然是，而且我看得出你絕對有足夠的天賦擁有一個！",
+    "source": "MasterCrafterDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I had to pay 2000gp for that ship!",
+    "zh-tw": "我那艘船花了 2000gp！",
+    "source": "AhabDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "I have a confession myself adventurer...",
+    "zh-tw": "我也有一個告解，冒險者...",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I have been invited to research here",
+    "zh-tw": "我受邀來這裡進行研究",
+    "source": "DougDeepingDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I have been sent by your father.",
+    "zh-tw": "我是由你的父親派來的。",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I have been sent here with a package for you. It's from",
+    "zh-tw": "我被派到這裡為你送一件包裹。它是從",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "I have some",
+    "zh-tw": "我有一些",
+    "source": "GDiplomacyCutscene.java",
+    "status": "translated"
+  },
+  {
+    "en": "I have some good news for you then.",
+    "zh-tw": "那麼我有一些好消息要告訴你。",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I have spoken to Boot the dwarf about the location",
+    "zh-tw": "我已經和矮人 Boot 談過關於那個地點的事了",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I hope the quest is going well",
+    "zh-tw": "我希望任務進展順利",
+    "source": "LegendsGuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I know how you feel... for such a long time",
+    "zh-tw": "我知道你的感受... 這麼長一段時間以來",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I know not how I can adequately reward you for your efforts...",
+    "zh-tw": "我不知道該如何充分獎勵你的努力...",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I need time to study this,",
+    "zh-tw": "我需要時間來研究這個，",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "I really need that",
+    "zh-tw": "我真的很需要那個",
+    "source": "TrufitusDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "I require the following cooked fish:",
+    "zh-tw": "我需要以下煮熟的魚：",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I saw him here in the church quite often. Everyone said he was going to become a priest and",
+    "zh-tw": "我常在教堂看到他。大家都說他將要成為一名牧師並且",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I suggest you be less careless in the future.",
+    "zh-tw": "我建議你以後不要這麼粗心。",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I suggest you take those research notes of mine back",
+    "zh-tw": "我建議你把我的研究筆記拿回去",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "I thought I had found a solid lead on its whereabouts",
+    "zh-tw": "我以為我已經找到了它下落的可靠線索",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I told him to head to the desert 'cos",
+    "zh-tw": "我叫他前往沙漠，因為",
+    "source": "GemTraderDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I would, but I am very busy. I am trying to increase",
+    "zh-tw": "我很想，但我非常忙碌。我正試著增加",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'd found a huge cave with all these platforms. I reckon it be an ancient civilisation that made it. I had",
+    "zh-tw": "我發現了一個擁有這些平台的大型洞穴。我認為那是古代文明建造的。我曾有",
+    "source": "CapnIzzyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'd like to see what you have for sale.",
+    "zh-tw": "我想看看你有什麼要出售的。",
+    "source": "LillyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'll tell you what:",
+    "zh-tw": "我告訴你：",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'm afraid you don't have the necessary runes with you at this time, so",
+    "zh-tw": "我恐怕你目前沒有攜帶必要的符文，所以",
+    "source": "BankChargeInterface.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'm also researching the links between the",
+    "zh-tw": "我也在研究... 之間的聯繫",
+    "source": "AlvissDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'm busy brewing potions, so if you",
+    "zh-tw": "我正忙著釀造藥水，所以如果你",
+    "source": "AliTheHagDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'm called Boot, because when I was very young,",
+    "zh-tw": "我被稱為靴子，因為在我還很小的時候，",
+    "source": "BootDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I'm more than a little busy at the moment,",
+    "zh-tw": "我目前非常忙碌，",
+    "source": "AliTheMayorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I've been given this letter by an examiner at the Dig",
+    "zh-tw": "我從挖掘現場的一位檢查員那裡得到了這封信件",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "I've lost my pet scorpions.",
+    "zh-tw": "我弄丟了我的寵物蠍子。",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "If ye miss a platform ye will miss out on the next ticket so try and get every platform you can!",
+    "zh-tw": "如果你錯過了一個平台，你就會錯過下一張票，所以盡量踩中你能踩到的每個平台！",
+    "source": "CapnIzzyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "If you can find me my perfect gold,",
+    "zh-tw": "如果你能幫我找到我完美的黃金，",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "If you find Caleb, or my other sons... please...",
+    "zh-tw": "如果你找到凱萊布，或是我的其他兒子們...求你了...",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "If you go up to the village of Seers, to the North of",
+    "zh-tw": "如果你前往先知村，在...的北邊",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "If you say so,",
+    "zh-tw": "既然你這麼說，",
+    "source": "GrandExchangeClerk.java",
+    "status": "translated"
+  },
+  {
+    "en": "In hindsight, it seems I was right.",
+    "zh-tw": "事後看來，似乎我是對的。",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "In your travels around",
+    "zh-tw": "在你在周圍旅行時",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Indeed you believe rightly,",
+    "zh-tw": "的確，你的想法是正確的，",
+    "source": "WiseOldManDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "It would be my pleasure,",
+    "zh-tw": "我會很樂意的，",
+    "source": "GrandExchangeClerk.java",
+    "status": "translated"
+  },
+  {
+    "en": "It's a diary that helps you keep track of particular achievements. Here on Karamja it can help",
+    "zh-tw": "這是一本可以幫助你記錄特定成就的日記。在卡拉姆這裡，它可以幫助",
+    "source": "PirateJackieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's a fine day to be out in a garden, isn't it?",
+    "zh-tw": "今天真是個適合待在花園的好日子，不是嗎？",
+    "source": "HoracioDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's a valuable family heirloom.",
+    "zh-tw": "這是一件珍貴的家族傳家寶。",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's all down to King Tyras of West Ardougne.",
+    "zh-tw": "這全都歸功於西阿爾多內的泰拉斯國王。",
+    "source": "MournerArdougneWallDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's funny that, actually. I've managed to get a",
+    "zh-tw": "說起來真是有趣。我設法得到了一個",
+    "source": "GabootyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's not really much use without",
+    "zh-tw": "沒有...的話，它其實沒什麼用處",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "It's the first excavation I've worked on,",
+    "zh-tw": "這是我的第一場挖掘工作，",
+    "source": "JariDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Jeremy, calm down. Player doesn't need to hear everything",
+    "zh-tw": "Jeremy，冷靜點。玩家不需要聽見所有事情",
+    "source": "JeremyServilBDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Jump! 'Cmon",
+    "zh-tw": "跳！快點",
+    "source": "FishbowlPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Last I heard he was on some",
+    "zh-tw": "我最後聽說他在某個",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Look around you! This museum is full of treasures!",
+    "zh-tw": "看著你的四周！這座博物館充滿了寶藏！",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Many creatures in many ways. You need to make some traps",
+    "zh-tw": "在許多方面有很多生物。你需要製作一些陷阱",
+    "source": "HuntingExpertRellekkaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Marvellous, thanks to your help,",
+    "zh-tw": "太棒了，多虧了你的幫助，",
+    "source": "BernaldDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "More than this however, it also represents the",
+    "zh-tw": "然而不僅僅是這個，它也代表了",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "My gratitude to you adventurer for bringing me these",
+    "zh-tw": "冒險者，感謝你帶給我這些",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "My husband is four times older than my daughter.",
+    "zh-tw": "我丈夫的年齡是我女兒的四倍。",
+    "source": "MsHynnTerprettDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "My presence here is the start of a new enterprise of travelling banks.",
+    "zh-tw": "我在此處的出現，是一項移動銀行新事業的開端。",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "My... my father wishes this? Then that is a different matter.",
+    "zh-tw": "我...我父親想要這個嗎？那又是另一回事了。",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "No, I meant treasures for ME.",
+    "zh-tw": "不，我的意思是給我自己的寶藏。",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "No, I'll only give it to the head wizard.",
+    "zh-tw": "不，我只會把它交給首席法師。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "No, the",
+    "zh-tw": "不，那個",
+    "source": "PetshopOwnerTaverly.java",
+    "status": "translated"
+  },
+  {
+    "en": "None of the gold around here is even",
+    "zh-tw": "這附近的黃金甚至連一點都",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "None of us wanted to give up our rights to our brothers,",
+    "zh-tw": "我們誰都不想放棄我們對兄弟們的權利，",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Now to explore this area thoroughly, to find what",
+    "zh-tw": "現在要徹底探索這個區域，以尋找什麼",
+    "source": "EWListeners.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Now, I suppose you will be wanting to find my brother",
+    "zh-tw": "現在，我想你一定會想要去找我的兄弟",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Obvious, yes, but why on",
+    "zh-tw": "很明顯，是的，但為什麼要",
+    "source": "AvaDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Of course",
+    "zh-tw": "當然",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Oh, It's those mice! They're everywhere!",
+    "zh-tw": "喔，是那些老鼠！牠們到處都是！",
+    "source": "CivilianDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Oh, it's a rune shop. No thank you, then.",
+    "zh-tw": "喔，這是一家符文商店。那不用了，謝謝。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ok then, I will do that.",
+    "zh-tw": "好吧，我會那麼做。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ok, I will. Thanks, see you later.",
+    "zh-tw": "好，我會的。謝謝，再見。",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Ok, here you are.",
+    "zh-tw": "好，給你。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ok, well I'll leave you to it.",
+    "zh-tw": "好吧，那我就不打擾你了。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Okay, I'll take the",
+    "zh-tw": "好的，我會拿取那個",
+    "source": "PetshopOwnerTaverly.java",
+    "status": "translated"
+  },
+  {
+    "en": "Old Father Packett was furious, but Dissy just laughed it off.",
+    "zh-tw": "Old Father Packett 非常憤怒，但 Dissy 只是付之一笑。",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "On the other hand, if Glough's right about the humans we will need an army of gnomes to protect ourselves.",
+    "zh-tw": "另一方面，如果格洛夫對人類的看法是正確的，我們將需要一支侏儒軍隊來保護自己。",
+    "source": "KingNarnodeDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Once in Varrock, take this package to the owner of the",
+    "zh-tw": "一旦到達瓦洛克，把這個包裹拿取給那個...的持有者",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "One day, a young man came here looking for stories about Dissy - of course,",
+    "zh-tw": "有一天，一名年輕的男人來到這裡尋找關於 Dissy 的故事——當然，",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "One night he gathered some lads together, and after the evening prayer-meeting",
+    "zh-tw": "一個夜晚他召集了一些小伙子，在晚上的祈禱會議之後",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Only too happy to help you,",
+    "zh-tw": "非常樂意幫助你，",
+    "source": "GrandExchangeClerk.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ooooh... thank you... Wow!",
+    "zh-tw": "喔喔喔...謝謝你...哇！",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Perhaphs I will see you later",
+    "zh-tw": "或許我稍後會見到你",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Play by the rules! The rules of",
+    "zh-tw": "遵守規則！...的規則",
+    "source": "TownCrierDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Really? But... surely he can't  have..? Please, let me",
+    "zh-tw": "真的嗎？但是...他肯定不該...？請讓我",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Really? How extraordinary! Well, that certainly is a",
+    "zh-tw": "真的嗎？太非凡了！好吧，那確實是個",
+    "source": "ReldoDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Recently I heard that my son Caleb is alive and well,",
+    "zh-tw": "最近我聽說我的兒子凱萊布還活著且安好，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Remember, I want the following cooked fish:",
+    "zh-tw": "記住，我要以下煮熟的魚：",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Report accuratley! When",
+    "zh-tw": "準確報告！當",
+    "source": "TownCrierDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Reporting is very simple and easy to do. Simply click the Report Abuse button at",
+    "zh-tw": "檢舉非常簡單容易。只需點擊「檢舉濫用」按鈕",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Right then. Here is the test paper.",
+    "zh-tw": "沒錯。這是測試卷。",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Right you are. I'll be here.",
+    "zh-tw": "你說得對。我會在這裡。",
+    "source": "grandpaJack.java",
+    "status": "translated"
+  },
+  {
+    "en": "Rock falls and so on are fine,",
+    "zh-tw": "岩石落下等等都是沒問題的，",
+    "source": "DonalDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Run this letter back to the Examiner to begin your adventure into the world of Earth Sciences. Enjoy your studies, Student!",
+    "zh-tw": "將這封信件送回給檢查員，以開啟你在地球科學世界的冒險。祝你學習愉快，學生！",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Saradomin rest his soul. I hear people try to get rich by fighting in the Wilderness north of here",
+    "zh-tw": "願薩拉多明安息他的靈魂。我聽說人們試圖透過在北邊的荒野戰鬥來致富",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Say no more. I too am looking for him.",
+    "zh-tw": "別再說了。我也在找他。",
+    "source": "AliTheOperator.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Schlorp, splort, splort, splutter shclorp?",
+    "zh-tw": "Schlorp, splort, splort, splutter shclorp?",
+    "source": "CompostMoundNPC.java",
+    "status": "translated"
+  },
+  {
+    "en": "Schlup glorp sputter!",
+    "zh-tw": "Schlup glorp sputter!",
+    "source": "CompostMoundNPC.java",
+    "status": "translated"
+  },
+  {
+    "en": "Schorp, splutter, splutter. Schlup schorp.",
+    "zh-tw": "Schorp, splutter, splutter. Schlup schorp.",
+    "source": "CompostMoundNPC.java",
+    "status": "translated"
+  },
+  {
+    "en": "Sentente sillaberi junque dithmento! Ia! Ia! dextrimon encanto! termando... imcando... solly enty rando... sentente! Ia! Ia! Indenti zaggarati g'thxa!",
+    "zh-tw": "Sentente sillaberi junque dithmento! Ia! Ia! dextrimon encanto! termando... imcando... solly enty rando... sentente! Ia! Ia! Indenti zaggarati g'thxa!",
+    "source": "AlomoneDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Sheep, ready for the slau...",
+    "zh-tw": "綿羊，準備好被宰殺...",
+    "source": "AliTheOperator.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Should you reconsider, because I believe this service offers excellent",
+    "zh-tw": "如果你改變主意，因為我相信這項服務提供卓越的",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Sigh... Young people - always in such a rush.",
+    "zh-tw": "唉... 年輕人——總是這麼匆忙。",
+    "source": "grandpaJack.java",
+    "status": "translated"
+  },
+  {
+    "en": "So I coshed this fella round the back of his head with me bag of jewels, picked up his package and was on me merry way afore he comes to.",
+    "zh-tw": "所以我用我的珠寶袋往那傢伙的頭部後方敲了一下，拿取了他的包裹，然後在他醒來之前就開心地離開了。",
+    "source": "MysteriousGhostRennardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "So far your score is:",
+    "zh-tw": "到目前為止你的分數是：",
+    "source": "RangingGuildPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "So, in the end, I decided why not make this a",
+    "zh-tw": "所以，最後，我決定為什麼不把這變成一個",
+    "source": "GECutscenePlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Tada, your xp rate is now",
+    "zh-tw": "噠噠，你的經驗值速率現在是",
+    "source": "HansDialoguePlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Take this package, and head directly North",
+    "zh-tw": "拿取這個包裹，直接向北前進",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Taking note of past successes and failures is important,",
+    "zh-tw": "留意過去的成功與失敗是很重要的，",
+    "source": "GECutscenePlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Tell me about the Rules of",
+    "zh-tw": "告訴我關於...的規則",
+    "source": "TownCrierDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Th-this talisman you brought me...! It is the last piece",
+    "zh-tw": "這-這枚你帶給我的護身符...! 它是最後一塊",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Thank you",
+    "zh-tw": "謝謝你",
+    "source": "JeremyServilBDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Thank you for saving our family honour,",
+    "zh-tw": "感謝你挽救了我們家族的榮譽，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Thank you, if you could bring me the other",
+    "zh-tw": "謝謝你，如果你能幫我拿回另一個",
+    "source": "RomilyWeaklaxDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Thank you. I'll look forward to it!",
+    "zh-tw": "謝謝。我會期待著的！",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "That good? Everyone around here seems a little depressed.",
+    "zh-tw": "那樣好嗎？這附近的人似乎都有點憂鬱。",
+    "source": "CitizenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "That is indeed a good question. Here in the cellar",
+    "zh-tw": "那確實是一個好問題。就在這裡的地窖裡",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "That's it! It really is that simple and it only takes a moment to do.",
+    "zh-tw": "就這樣！真的就是這麼簡單，而且只需要片刻就能完成。",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The King has taken my estate from me",
+    "zh-tw": "國王從我手中奪走了我的產業",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The Z.M.I. - that is - the Zamorakian Magical Institute, required my services",
+    "zh-tw": "Z.M.I. ——也就是扎莫拉克魔法學院——需要我的服務",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The charge to open your account is the small amount of twenty of one type of rune.",
+    "zh-tw": "開立帳戶的費用是少量的二十個單一類型的符文。",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The fiend has made his lair in Edgeville Dungeon.",
+    "zh-tw": "那個惡魔在艾吉村地牢築巢了。",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The only thing I have heard of my son Caleb",
+    "zh-tw": "我所聽說關於我兒子凱萊布的消息僅有",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The problem however for me, is that",
+    "zh-tw": "然而對我來說，問題在於",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The style of the shot",
+    "zh-tw": "射擊的風格",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "The... poison... it is all...",
+    "zh-tw": "那種... 毒素... 這一切都...",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Their motto is: \"We aim to deliver your stuff at some point after you have paid us!\"",
+    "zh-tw": "他們的座右銘是：「我們的目標是在您付款後的某個時間點送達您的物品！」",
+    "source": "CrompertyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Then simply find yourself a fishing spot,",
+    "zh-tw": "然後只需找一個釣魚點，",
+    "source": "grandpaJack.java",
+    "status": "translated"
+  },
+  {
+    "en": "Then, they snuck down to the temple in the south of the city - the evil one.",
+    "zh-tw": "然後，他們偷偷溜下城鎮南邊的神廟——那個邪惡之處。",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There are various other people across",
+    "zh-tw": "各地還有其他各種不同的人",
+    "source": "EstateAgentDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There is a certain lady I am trying to impress.",
+    "zh-tw": "我正試著去吸引一位女士的注意。",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There you go, finest rope in",
+    "zh-tw": "給你，這是最好的繩索",
+    "source": "NedDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There you go, good luck student... Be sure to come",
+    "zh-tw": "給你，祝你好運，學生... 記得要回來",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There's three of them, and they're quick little beasties.",
+    "zh-tw": "有三個，它們是動作很快的小畜生。",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "There's trouble in town, and a lot of",
+    "zh-tw": "城鎮裡發生了麻煩，還有很多",
+    "source": "AliTheMayorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "They can also be granted extra powers.",
+    "zh-tw": "他們也可以被賦予額外的力量。",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "They're the local currency Bwana,",
+    "zh-tw": "他們是當地貨幣，先生，",
+    "source": "GabootyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "This dates back to the times when there was much in-fighting",
+    "zh-tw": "這可以追溯到內鬥頻繁的時期",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "This is the Misthalin Training Centre of Excellence.",
+    "zh-tw": "這是米斯塔林卓越訓練中心。",
+    "source": "ProfessorHenryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "This... this is incredible. Please, give me a few moments",
+    "zh-tw": "這... 這太令人難以置信了。請給我幾分鐘時間",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Those accursed poison spiders that surround",
+    "zh-tw": "那些圍繞著的該死的毒蜘蛛",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "To claim the different Karamja gloves, speak to Kaleb Paramaya in Shilo Village, one of the jungle",
+    "zh-tw": "若要領取不同的卡拉姆手套，請前往希洛村找卡萊布·帕拉馬亞，那是叢林中的其中之一",
+    "source": "PirateJackieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "To claim the explorer's ring speak to Explorer Jack in",
+    "zh-tw": "若要領取探險家戒指，請在... 找探險家傑克",
+    "source": "NedDiaryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Today is your lucky day,",
+    "zh-tw": "今天是你的幸運日，",
+    "source": "RickTurpentineDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Tourniquet, Fenderbaum, Tottenham, marshmaallow,",
+    "zh-tw": "Tourniquet, Fenderbaum, Tottenham, marshmaallow,",
+    "source": "AggieDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Travel back to",
+    "zh-tw": "再次回到",
+    "source": "RugMerchantDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "True, but if the gnomes are really going to take over",
+    "zh-tw": "沒錯，但如果侏儒真的要接管的話",
+    "source": "ForemanNPC.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Try to get a spot round there.",
+    "zh-tw": "試著在那附近找個位置。",
+    "source": "grandpaJack.java",
+    "status": "translated"
+  },
+  {
+    "en": "Uh... yeah... about that... I kind of don't have it with",
+    "zh-tw": "呃... 是啊... 關於那件事... 我好像沒把它帶在身上",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ukkuk oook! Eeek aka, ahh aka gonk.",
+    "zh-tw": "Ukkuk oook! Eeek aka, ahh aka gonk.",
+    "source": "MonkeyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Unfortunately all Skillcapes are only available with a free hood, it's part",
+    "zh-tw": "不幸的是，所有的技能斗篷都僅附贈一個免費兜帽，這是因為",
+    "source": "MasterCrafterDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Unfortunately not,",
+    "zh-tw": "很遺憾，並非如此，",
+    "source": "SirKayDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Unless you were talking to me because you wished to",
+    "zh-tw": "除非你找我說話是因為你想",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Unsurprisingly, I do not believe he is doing a particularly good job of things,",
+    "zh-tw": "果不其然，我不認為他把事情做得特別好，",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Uurgh! My head still hurts too much to think straight.",
+    "zh-tw": "唔！我的頭部還是痛到無法思考。",
+    "source": "BravekDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We WILL meet again,",
+    "zh-tw": "我們 WILL 再相見，",
+    "source": "BonzaraDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We at the Bank of Gielinor are a neutral party and are willing to offer our",
+    "zh-tw": "我們吉力諾銀行是中立方，並願意提供我們的",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We each went our separate ways many years past,",
+    "zh-tw": "多年前我們各自分道揚鑣了，",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We have to take measures to contain the disease.",
+    "zh-tw": "我們必須採取措施來遏制這種疾病。",
+    "source": "MournerEdmondHouseDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We know you will be busy creating runes and do not wish",
+    "zh-tw": "我們知道你將忙於製作符文，並且不想",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "We'll be open as soon as we realize our customer experience goals",
+    "zh-tw": "一旦我們達成顧客體驗目標，我們就會立即營業",
+    "source": "OgressBankerDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well I have a scorpion cage here which you can",
+    "zh-tw": "嗯，我這裡有一個蠍子籠子，你可以",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well I suppose I can aid you with my skills as a staff sorcerer.",
+    "zh-tw": "嗯，我想我可以利用我作為一名法杖巫師的技能來協助你。",
+    "source": "SCThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well done, adventurer. You are clearly a",
+    "zh-tw": "做得好，冒險者。你顯然是一個",
+    "source": "SeerDiaryDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well done, young",
+    "zh-tw": "做得好，年輕的",
+    "source": "SirKayDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "Well done. Your score is:",
+    "zh-tw": "做得好。你的分數是：",
+    "source": "RangingGuildPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Well positions of responsibility are hard,",
+    "zh-tw": "嗯，負責任的職位是很艱難的，",
+    "source": "BravekDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well that is true...",
+    "zh-tw": "嗯，那是真的...",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, I AM the head wizard here...",
+    "zh-tw": "嗯，我才是這裡的頭部法師...",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Well, I am the oldest son, so by the rules of chivalry,",
+    "zh-tw": "嗯，我是長子，所以根據騎士精神的規則，",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, I won't entrust you with my piece of the crest",
+    "zh-tw": "嗯，我不會把紋章的一部分託付給你",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, dearie, I am probably not the best person to ask about money, but I think the best thing",
+    "zh-tw": "嗯，親愛的，我可能不是詢問金錢的最佳人選，但我認為最好的做法是",
+    "source": "ElsieDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, luckily I have duplicates. It's a good thing they",
+    "zh-tw": "嗯，幸好我有複製品。幸好它們",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Well, maybe we'll all get lucky",
+    "zh-tw": "嗯，也許我們都會走運",
+    "source": "GemTraderDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, me hearty, it's simple. Ye can cross between two platforms by using the traps or obstacles",
+    "zh-tw": "嗯，我的夥伴，這很簡單。你可以透過使用陷阱或障礙物在兩個平台之間穿梭",
+    "source": "CapnIzzyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, my three sons took it",
+    "zh-tw": "嗯，我的三個兒子把它拿走了",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, my three sons took it with them",
+    "zh-tw": "嗯，我的三個兒子把它們帶走了",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, there is a long standing rule of chivalry",
+    "zh-tw": "嗯，有一項長期存在的騎士精神規則",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, they do know what they're doing here.",
+    "zh-tw": "嗯，他們確實知道自己在這裡做什麼。",
+    "source": "ClerkDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, we haven't really kept in touch...",
+    "zh-tw": "嗯，我們其實一直沒有保持聯繫...",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well, we've got Asgarnian Ale, Wizard's Mind Bomb and Dwarven Stout.",
+    "zh-tw": "嗯，我們有阿斯加尼亞麥酒、法師的心靈炸彈和矮人濃黑啤酒。",
+    "source": "RisingSunInnBartenderDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well... my brothers and I",
+    "zh-tw": "嗯... 我和我的兄弟們",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well... my brothers and I had a slight disagreement about it...",
+    "zh-tw": "嗯... 我和我的兄弟們對此有些小分歧...",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well... you will have to be a skilled Mage to defeat him,",
+    "zh-tw": "嗯... 你必須成為一名技術高超的法師才能擊敗他，",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "What I intend to give her, is a golden ring,",
+    "zh-tw": "我打算送給她的，是一枚金戒指，",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "What have we here? A letter of recommendation",
+    "zh-tw": "我們這是在看什麼？一封推薦信件",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "What kind of person tells me theyhave a delivery for",
+    "zh-tw": "什麼樣的人會告訴我他們有要遞送給",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "What... what did that spider... DO to me?",
+    "zh-tw": "那... 那隻蜘蛛對我... 做什麼了？",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Where am I meant to get",
+    "zh-tw": "我應該去哪裡取得",
+    "source": "GDiplomacyCutscene.java",
+    "status": "translated"
+  },
+  {
+    "en": "Why... yes I am, but I don't believe I know you...",
+    "zh-tw": "是... 是的，但我並不認為我認識你...",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Would you like to pay the price of twenty runes to open",
+    "zh-tw": "你願意支付二十個符文的代價來開啟嗎",
+    "source": "EniolaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Wow! I see that you've got yourself a whole load of",
+    "zh-tw": "哇！我看你弄到了一大堆",
+    "source": "RangingGuildPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Ye receive tickets for tagging more than one pillar in a row. So ye won't get a ticket from the",
+    "zh-tw": "如果你連續標記超過一個石柱，你就會獲得票券。所以你不會從",
+    "source": "CapnIzzyDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes as long as you pick",
+    "zh-tw": "是的，只要你使用鎬",
+    "source": "GDiplomacyCutscene.java",
+    "status": "translated"
+  },
+  {
+    "en": "Yes please, I'd like to go to",
+    "zh-tw": "是的請，我想去",
+    "source": "ShiloCart.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, I certainly am.",
+    "zh-tw": "是的，我確實是。",
+    "source": "ExaminerDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, I saw you drop it as you walked off last time. Here it is.",
+    "zh-tw": "是的，我看到你上次走開時把它丟棄了。就在這裡。",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, citizen. Before you do I am instructed to give",
+    "zh-tw": "是的，公民。在你這麼做之前，我受命要給予",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, it'll cost you 40,000 coins for the materials needed though.",
+    "zh-tw": "是的，不過所需的材料會花費你 40,000 硬幣。",
+    "source": "ThormacDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes, or one of the other mills in",
+    "zh-tw": "是的，或者在其他的磨坊裡",
+    "source": "MillieMillerDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes. Once you have have examined each of the plaques, come and speak to me",
+    "zh-tw": "是的。一旦你查看了每一塊牌匾，就來找我談談",
+    "source": "GuardDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Yes. You have done well,",
+    "zh-tw": "是的。你做得很好，",
+    "source": "ZaffPlugin.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You are truly a hero in every sense,",
+    "zh-tw": "你在各方面都是一名真正的英雄，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You are welcome",
+    "zh-tw": "不客氣",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "You have a part of your family crest. I am on a quest",
+    "zh-tw": "你有一部分你的家族紋章。我正在執行一個任務",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You have foiled my plans,",
+    "zh-tw": "你挫敗了我的計畫，",
+    "source": "SurokMagisDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "You have? Unfortunately I don't have it any more...",
+    "zh-tw": "你有嗎？不幸的是我不再擁有它了...",
+    "source": "JohnathonDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You need",
+    "zh-tw": "你需要",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "You need a Construction level of",
+    "zh-tw": "你需要建造等級達到",
+    "source": "EstateAgentDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You need something new to hunt. Come and",
+    "zh-tw": "你需要一些新的獵物。快來",
+    "source": "EnchantedJewellery.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You seem to know a bit about raising animals - would you like to raise a penguin for us?",
+    "zh-tw": "你似乎對飼養動物有些了解——你願意幫我們養一隻企鵝嗎？",
+    "source": "PenguinKeeperDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You will have to be a lot more specific if",
+    "zh-tw": "如果你要更明確一點的話，就必須...",
+    "source": "AliTheOperator.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You're a bad",
+    "zh-tw": "你是一個糟糕的",
+    "source": "PhilipeDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You're a brave",
+    "zh-tw": "你是一個勇敢的",
+    "source": "JoeDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You're currently",
+    "zh-tw": "你目前是",
+    "source": "EnchantedJewellery.kt",
+    "status": "translated"
+  },
+  {
+    "en": "You've certainly done a lot to help out Varrock Museum, so we'd be silly not to ask for your expertise.",
+    "zh-tw": "你確實為瓦洛克博物館提供了很多幫助，所以如果不向你尋求專業建議就太傻了。",
+    "source": "CuratorHaigHalenDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Your current XP rate is:",
+    "zh-tw": "你目前的經驗值率為：",
+    "source": "HansDialoguePlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Your house has been moved to",
+    "zh-tw": "你的房屋已搬遷至",
+    "source": "EstateAgentDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Your ironman mode is:",
+    "zh-tw": "你的鐵人模式為：",
+    "source": "HansDialoguePlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "Your stories have entertained me. But I will not permit any adventurer to access the tears more than once a week. Come back in",
+    "zh-tw": "你的故事讓我樂在其中。但我不會允許任何冒險者每週進入淚水之地的次數超過一次。請在...之後再回來",
+    "source": "JunaDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Your strength",
+    "zh-tw": "你的力量",
+    "source": "ReffDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "and if my suspicions are correct, I will let you into the",
+    "zh-tw": "如果我的懷疑是正確的，我會讓你進入",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "arena and to help fund magic shops around",
+    "zh-tw": "競技場，並協助資助周邊的魔法商店",
+    "source": "EntranceGuardianDialogue.java",
+    "status": "translated"
+  },
+  {
+    "en": "as Varrock can be a confusing place for the first time",
+    "zh-tw": "因為瓦洛克對第一次造訪的人來說可能是一個令人困惑的地方",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "have made them...",
+    "zh-tw": "使他們變得...",
+    "source": "MysteriousGhostDhalakDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "is located North East of here, there is a certain shop",
+    "zh-tw": "位於這裡的東北方，那裡有一間特定的商店",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "many years past by the treachery of the Zamorakians.",
+    "zh-tw": "在許多年前，因為扎莫拉克的背叛而發生。",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "or if the owner has died.",
+    "zh-tw": "或者如果店主已經去世。",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "original Wizards' Tower all of those centuries",
+    "zh-tw": "最初的法師塔在過去的幾個世紀中",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "require somebody to take them to the shopkeeper so that",
+    "zh-tw": "需要有人將它們拿取給店主，以便",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "so if you will assist me in my search for the ingredients,",
+    "zh-tw": "所以如果你願意協助我尋找這些材料，",
+    "source": "CalebDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "then the family's estate is handed over to the",
+    "zh-tw": "那麼家族的遺產將移交給",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "to fight in the war against the undead necromancer",
+    "zh-tw": "去參加對抗不死死靈法師的戰爭",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "we sought to show the world of our dedication to",
+    "zh-tw": "我們試圖向世界展示我們對...的奉獻",
+    "source": "WizardTowerPlugin.java",
+    "status": "translated"
+  },
+  {
+    "en": "when I heard talk of a dwarven expert on gold named Boot",
+    "zh-tw": "當我聽說有一位名叫 Boot 的矮人黃金專家時",
+    "source": "AvanDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "where each noble family is in possession of a unique crest,",
+    "zh-tw": "在那裡，每個貴族家族都擁有一枚獨特的紋章，",
+    "source": "DimintheisDialogue.kt",
+    "status": "translated"
+  }
+]

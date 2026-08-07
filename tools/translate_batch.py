@@ -65,8 +65,11 @@ def select_relevant_terms(texts, glossary, max_terms=MAX_TERMS):
                 break
     return relevant
 
-def build_prompt(texts, glossary):
-    """gemma 專用 prompt：術語區塊 + 台灣正體 + 片段提示 + 編號輸出。"""
+def build_prompt(texts, glossary, bilingual=False):
+    """gemma 專用 prompt：術語區塊 + 台灣正體 + 片段提示 + 編號輸出。
+
+    bilingual=True：專有名詞（人名/地名/物品名）音譯成中文，輸出「中文 (English)」格式。
+    """
     relevant = select_relevant_terms(texts, glossary)
     gloss_lines = "\n".join(f"{en} translates to {zh}" for en, zh in relevant.items())
     gloss_block = (
@@ -74,6 +77,22 @@ def build_prompt(texts, glossary):
         if gloss_lines else ""
     )
     formatted = "\n".join(f"{i+1}. {t}" for i, t in enumerate(texts))
+    if bilingual:
+        extra_rules = (
+            "- These are NAMES (NPC names, place names, item/object names).\n"
+            "- Transliterate NPC names and place names into Chinese phonetic text; translate item/object names into Chinese.\n"
+            "- Output format: 「中文 (English original)」 — Chinese first, then the original English in half-width parentheses.\n"
+            "- Never leave the output as English only; always provide the Chinese translation."
+        )
+        return f"""你是 RuneScape 2009 遊戲的台灣正體中文翻譯。
+請翻譯以下 {len(texts)} 個名稱。{gloss_block}
+規則：
+- 只輸出編號翻譯，每個一行。
+- 人名、地名必須音譯成中文（如 Bigface Oz → 大臉奧茲）；物品/物件名意譯成中文。
+- 輸出格式為「中文 (原始英文)」，中文在前，英文用半形括號放在後。
+- 不允許只輸出英文；一定給出中文。
+- 照抄上方術語表的用法，不得更改。
+{formatted}"""
     return f"""You are a professional game translator for RuneScape 2009.
 Translate the following {len(texts)} English lines into Traditional Chinese (Taiwan, 正體中文).{gloss_block}
 Rules:
@@ -112,9 +131,9 @@ def translate_batch_ollama(texts, glossary):
     content = resp.json().get("response", "")
     return parse_output(content, len(texts))
 
-def translate_batch_openai(texts, glossary):
+def translate_batch_openai(texts, glossary, bilingual=False):
     """相容 OpenAI 風格 /v1/chat/completions"""
-    prompt = build_prompt(texts, glossary)
+    prompt = build_prompt(texts, glossary, bilingual)
     payload = {
         "model": MODEL_NAME,
         "messages": [
@@ -192,6 +211,8 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="只輸出將翻譯的條目，不呼叫 API")
     ap.add_argument("--update-glossary", action="store_true",
                     help="翻譯過程中把已翻譯術語動態併入 glossary（供後續批次注入，適合術語表翻譯）")
+    ap.add_argument("--bilingual", action="store_true",
+                    help="名稱模式：人名/地名音譯、物品/物件名意譯，輸出「中文 (English)」格式")
     args = ap.parse_args()
 
     with open(args.table, "r", encoding="utf-8") as f:
@@ -223,7 +244,7 @@ def main():
         if e.get("fragment_type") == "bookline" and e.get("group_id"):
             book_groups[e["group_id"]].append((i, e))
 
-    def api_call(lines, is_book):
+    def api_call(lines, is_book, bilingual):
         for attempt in range(MAX_RETRIES + 1):
             try:
                 if is_book:
@@ -232,7 +253,7 @@ def main():
                     return translate_book_openai(lines, glossary)
                 if "/api/generate" in API_URL:
                     return translate_batch_ollama([t for _, t in lines], glossary)
-                return translate_batch_openai([t for _, t in lines], glossary)
+                return translate_batch_openai([t for _, t in lines], glossary, bilingual)
             except requests.RequestException as e:
                 if attempt >= MAX_RETRIES:
                     print(f"!! API 持續失敗（{e}），跳過，下次續傳", file=sys.stderr)
@@ -246,7 +267,7 @@ def main():
         entries.sort(key=lambda x: x[1].get("line_no", 0))
         lines = [(e["line_no"], e["en"]) for _, e in entries]
         print(f">> 書籍 {gid} ({len(entries)} 行) ...")
-        translated = api_call(lines, True)
+        translated = api_call(lines, True, args.bilingual)
         for i, e in entries:
             t = translated.get(e["line_no"])
             if t:
@@ -264,7 +285,7 @@ def main():
         texts = [(e["en"]) for _, e in batch]
         print(f">> 批次 {batch_start//TEXTS_PER_BATCH + 1}: {len(texts)} 條 ...")
 
-        translated = api_call([(i, t) for i, t in enumerate(texts)], False)
+        translated = api_call([(i, t) for i, t in enumerate(texts)], False, args.bilingual)
 
         for offset, (idx, entry) in enumerate(batch):
             t = translated.get(offset + 1)
