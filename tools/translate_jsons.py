@@ -27,16 +27,31 @@ def build_lookup(table):
             lookup[e["en"]] = zh
     return lookup
 
+def build_lookup_from_glossary(path):
+    """從術語表 TSV 建立 en -> zh-tw 對照。"""
+    lookup = {}
+    if path and os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            for line in f:
+                parts = line.strip().split("\t")
+                if len(parts) >= 2 and parts[0] and parts[1]:
+                    lookup[parts[0]] = parts[1]
+    return lookup
+
 def main():
     ap = argparse.ArgumentParser(description="翻譯表回寫 config JSON")
     ap.add_argument("--table", required=True, help="翻譯表 JSON")
     ap.add_argument("--configs", required=True, help="config JSON 目錄")
+    ap.add_argument("--glossary", help="術語表 TSV（額外回寫來源，補單詞道具/NPC 名）")
     ap.add_argument("--dry-run", action="store_true", help="只顯示將改動的內容")
     args = ap.parse_args()
 
     with open(args.table, "r", encoding="utf-8") as f:
         table = json.load(f)
     lookup = build_lookup(table)
+    if args.glossary:
+        lookup.update(build_lookup_from_glossary(args.glossary))
+    print(f"回寫對照 {len(lookup)} 條（含術語表 {len(build_lookup_from_glossary(args.glossary)) if args.glossary else 0} 條）")
 
     changed = 0
     for fn in sorted(os.listdir(args.configs)):

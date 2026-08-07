@@ -1,0 +1,356 @@
+[
+  {
+    "en": "talk-to",
+    "zh-tw": "交談",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "hello",
+    "zh-tw": "你好",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "nowhere",
+    "zh-tw": "無處可去",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "fishing",
+    "zh-tw": "釣魚",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello there, newcomer. My name is Brynna. My job is to teach you a few survival tips and tricks. First off we're going to start with the most basic survival skill of all: making a fire.",
+    "zh-tw": "你好，新手。我的名字是 Brynna。我的工作是教你一些生存技巧與訣竅。首先，我們要從最基本的生存技能開始：生火。",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The Survival Guide gives you a",
+    "zh-tw": "生存指南會給你一個",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The Survival Guide gives you a spare bronze axe.",
+    "zh-tw": "生存指南會給你一把備用的青銅斧。",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The Survival Guide gives you a spare tinderbox.",
+    "zh-tw": "生存指南會給你一個備用的火石盒。",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "The Survival Guide gives you a spare net.",
+    "zh-tw": "生存指南會給你一個備用的網。",
+    "source": "SurvivalExpertDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "butter",
+    "zh-tw": "奶油",
+    "source": "TutorialCombatInstructorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Now, the next way to earn money quickly is by quests. Many people on ",
+    "zh-tw": "現在，下一個快速賺錢的方法是透過任務。許多人在",
+    "source": "TutorialFinanceAdvisorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "spelllist",
+    "zh-tw": "咒語清單",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Hello.",
+    "zh-tw": "你好。",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "leave",
+    "zh-tw": "離開",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "inauthentic",
+    "zh-tw": "非正統的",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "xprate",
+    "zh-tw": "經驗值倍率",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "ironman",
+    "zh-tw": "鐵人模式",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "1.0x",
+    "zh-tw": "1.0x",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "2.5x",
+    "zh-tw": "2.5x",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "5.0x",
+    "zh-tw": "5.0x",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "NONE",
+    "zh-tw": "無",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "STANDARD",
+    "zh-tw": "標準",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Standard",
+    "zh-tw": "標準",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "ULTIMATE",
+    "zh-tw": "極致",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "ironwarning",
+    "zh-tw": "鐵警告",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "leave:yes",
+    "zh-tw": "離開：是",
+    "source": "TutorialMagicTutorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "king.",
+    "zh-tw": "王。",
+    "source": "TutorialMasterChefDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "now.",
+    "zh-tw": "現在。",
+    "source": "TutorialMasterChefDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "prospected",
+    "zh-tw": "已探勘",
+    "source": "TutorialMiningInstructorDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Greetings! I see you are a new arrival to this land. My",
+    "zh-tw": "問候！我看到你是這片土地的新來者。我",
+    "source": "TutorialRSGuideDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "journey.",
+    "zh-tw": "旅程。",
+    "source": "TutorialRSGuideDialogue.kt",
+    "status": "translated"
+  },
+  {
+    "en": "explore the game. Talk to the ",
+    "zh-tw": "探索遊戲。與",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Talk to Survival Expert by the pond to continue the tutorial.",
+    "zh-tw": "與池塘旁的生存專家交談以繼續教學。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "for a moment while ",
+    "zh-tw": "片刻，同時",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "she",
+    "zh-tw": "她",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "and how much is needed to get to the next level. Speak to the survival guide.",
+    "zh-tw": "以及升到下一級需要多少經驗值。請與生存指南交談。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "another.",
+    "zh-tw": "另一個。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Well done, you've just cooked your first ",
+    "zh-tw": "做得好，你剛剛煮出了你的第一份",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "the Survival Expert. You can now move on to the next",
+    "zh-tw": "生存專家。你現在可以進行下一個",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "emotes.",
+    "zh-tw": "表情動作。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Running",
+    "zh-tw": "奔跑",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Prospecting",
+    "zh-tw": "探礦",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Smelting",
+    "zh-tw": "熔煉",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Combat",
+    "zh-tw": "戰鬥",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Instructor.",
+    "zh-tw": "教練。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "interface.",
+    "zh-tw": "介面。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Attacking",
+    "zh-tw": "攻擊中",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "Banking.",
+    "zh-tw": "銀行作業。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "This is the 'Bank of ",
+    "zh-tw": "這是「...銀行",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "skill.",
+    "zh-tw": "技能。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "tries.",
+    "zh-tw": "次嘗試。",
+    "source": "TutorialDialogs.kt",
+    "status": "translated"
+  },
+  {
+    "en": "mine",
+    "zh-tw": "我的礦坑",
+    "source": "TutorialEventReceivers.kt",
+    "status": "translated"
+  },
+  {
+    "en": "equip",
+    "zh-tw": "裝備",
+    "source": "TutorialEventReceivers.kt",
+    "status": "translated"
+  },
+  {
+    "en": "attack",
+    "zh-tw": "攻擊",
+    "source": "TutorialEventReceivers.kt",
+    "status": "translated"
+  },
+  {
+    "en": "booth",
+    "zh-tw": "攤位",
+    "source": "TutorialEventReceivers.kt",
+    "status": "translated"
+  },
+  {
+    "en": "use",
+    "zh-tw": "使用",
+    "source": "TutorialEventReceivers.kt",
+    "status": "translated"
+  },
+  {
+    "en": "open",
+    "zh-tw": "打開",
+    "source": "TutorialListeners.kt",
+    "status": "translated"
+  },
+  {
+    "en": "climb-down",
+    "zh-tw": "爬下",
+    "source": "TutorialListeners.kt",
+    "status": "translated"
+  },
+  {
+    "en": "prospect",
+    "zh-tw": "探礦",
+    "source": "TutorialListeners.kt",
+    "status": "translated"
+  }
+]

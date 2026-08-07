@@ -158,7 +158,9 @@ def is_junk(s):
 
 
 def load_existing_keys(client_src, server_table):
-    """從 CacheTranslation.java 與伺服器翻譯表收集已存在的 key。"""
+    """收集已存在的 key。
+    注意：只排除「客戶端」既有 key（base CacheTranslation）。伺服器表 EXCLUDE 會誤傷——
+    skill guide 等是客戶端顯示，需要伺服器表字串也要進客戶端表。"""
     keys = set()
     if client_src and os.path.exists(client_src):
         src = open(client_src, encoding='utf-8').read()
@@ -167,11 +169,6 @@ def load_existing_keys(client_src, server_table):
             parts = data.split('\u0000')
             for i in range(0, len(parts) - 1, 2):
                 keys.add(parts[i])
-    if server_table and os.path.exists(server_table):
-        try:
-            keys.update(json.load(open(server_table, encoding='utf-8')).keys())
-        except (ValueError, AttributeError):
-            pass
     return keys
 
 

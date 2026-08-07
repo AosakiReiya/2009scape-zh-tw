@@ -23,11 +23,20 @@ import sys
 
 # 只提取「像句子」的英文字串：含空格或較長，過濾 bytecode/套件名雜訊
 SENTENCE_RE = re.compile(r"[A-Za-z][A-Za-z ]{2,}")
+# 注意：此處過濾的是「萃取出的字串內容」，不是原始碼行。
+# 只用於濾掉明確的技術/路徑雜訊；Kotlin 關鍵字（val/fun/var/import）不在此列，
+# 因為它們會誤傷正常英文句子（如 "Survival Guide" 含 "val "、"important" 含 "import"）。
 BLACKLIST_SUBSTR = [
     "java.", "kotlin.", "org.", "com.", "core.", "content.", "api.",
-    "http", ".kt", ".java", "fun ", "val ", "var ", "import ", "package ",
-    "import", "TODO", "FIXME", "//", "/*", "*/",
+    ".kt", ".java", "package ", "TODO", "FIXME", "//", "/*", "*/",
+    "http://", "https://",
 ]
+
+# 以連接字/冠詞/所有格/be 動詞等結尾的片段特徵（執行期拼接或書籍斷行）
+# BookLine("...", line_no) 擷取
+BOOKLINE_RE = re.compile(r'BookLine\(\s*"((?:[^"\\]|\\.)*)"\s*,\s*(\d+)\s*\)')
+# 分頁界限：BookLine 之後緊接 "), " 再出現 Page( / PageSet( / ), Page( 等
+PAGE_BOUNDARY_RE = re.compile(r'PageSet?\(|\)\s*,\s*Page\(|\)\s*\)\s*,\s*Page\(')
 
 def looks_translatable(s):
     if len(s) < 3:
@@ -53,6 +62,31 @@ def looks_translatable(s):
         return False
     return True
 
+def classify_fragment(s, is_bookline):
+    """判定片段類型。
+    - template: 含 ${} 的 Kotlin 模板（執行期代入，照翻）
+    - bookline: BookLine 斷行（需按上下文分組翻譯）
+    - concat: 執行期拼接片段（以尾隨空格結尾，攔截器永不命中，跳過）
+    - 其他: 正常完整句
+    """
+    if is_bookline:
+        return "bookline"
+    if "${" in s:
+        return "template"
+    # 只有「以空格結尾」才是明確的執行期拼接片段
+    # （以連接字結尾可能是完整短句如 "Rocking Out"，不宜誤殺）
+    if s.endswith(" "):
+        return "concat"
+    return "normal"
+
+def _triple_to_entry(m, results, rel):
+    """三引號多行字串：合併為單行加入 results，並以佔位符回傳（避免被 "..." 正則重複抓取）。"""
+    s = re.sub(r"\s+", " ", m.group(1)).strip()
+    if looks_translatable(s):
+        results.append({"en": s, "zh-tw": "", "source": rel, "status": "untranslated",
+                        "fragment_type": "normal"})
+    return '"""""'
+
 def extract_from_kotlin(path):
     """從 .kt 原始碼提取字串常數池。"""
     results = []
@@ -62,10 +96,37 @@ def extract_from_kotlin(path):
     except OSError:
         return results
     rel = os.path.relpath(path)
+
+    # 依原始碼順序解析 BookLine，並偵測分頁界限分組
+    bookline_entries = []  # (group_id, en, line_no)
+    group_id = 0
+    prev_end = None
+    for m in BOOKLINE_RE.finditer(src):
+        s = m.group(1)
+        if not looks_translatable(s):
+            continue
+        if prev_end is not None and PAGE_BOUNDARY_RE.search(src[prev_end:m.start()]):
+            group_id += 1
+        bookline_entries.append((group_id, s, int(m.group(2))))
+        prev_end = m.end()
+
+    # 抓 Kotlin 三引號多行字串（"""..."""），內容合併為單行；移除已抓區段避免與下方 "..." 重複
+    src = re.sub(r'"""(.*?)"""', lambda m: _triple_to_entry(m, results, rel), src, flags=re.S)
+
     for m in re.finditer(r'"((?:[^"\\]|\\.)*)"', src):
         s = m.group(1)
-        if looks_translatable(s):
-            results.append({"en": s, "zh-tw": "", "source": rel, "status": "untranslated"})
+        if not looks_translatable(s):
+            continue
+        entry = {"en": s, "zh-tw": "", "source": rel, "status": "untranslated",
+                 "fragment_type": classify_fragment(s, False)}
+        # 若屬 BookLine，覆寫為 bookline 型態並附加分組資訊
+        for gid, be, ln in bookline_entries:
+            if be == s:
+                entry["fragment_type"] = "bookline"
+                entry["group_id"] = f"{rel}#{gid}"
+                entry["line_no"] = ln
+                break
+        results.append(entry)
     return results
 
 def extract_from_json(path):
@@ -82,7 +143,8 @@ def extract_from_json(path):
         if isinstance(obj, dict):
             for k, v in obj.items():
                 if k in TEXT_KEYS and isinstance(v, str) and looks_translatable(v):
-                    results.append({"en": v, "zh-tw": "", "source": rel, "field": k, "status": "untranslated"})
+                    results.append({"en": v, "zh-tw": "", "source": rel, "field": k,
+                                    "status": "untranslated", "fragment_type": "normal"})
                 else:
                     walk(v)
         elif isinstance(obj, list):
@@ -105,7 +167,7 @@ def main():
             if "/build/" in root or "/target/" in root:
                 continue
             for fn in files:
-                if fn.endswith(".kt") and not fn.endswith("Test.kt"):
+                if (fn.endswith(".kt") or fn.endswith(".java")) and not fn.endswith("Test.kt"):
                     all_results.extend(extract_from_kotlin(os.path.join(root, fn)))
     if args.configs:
         for fn in os.listdir(args.configs):

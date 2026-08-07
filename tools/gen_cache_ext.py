@@ -9,6 +9,8 @@
 """
 import argparse
 import json
+import re
+import os
 
 # 每個常數最多條目數（每條約 30-40 bytes，65535 上限取安全值）
 CHUNK = 1000
@@ -35,10 +37,21 @@ def main():
     ap = argparse.ArgumentParser(description="生成 CacheTranslationExt.java")
     ap.add_argument("--table", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--name-translation", default=None,
+                    help="NameTranslation.java 路徑：排除已在其中的 key（由 NameTranslation fallback 提供一致翻譯）")
     args = ap.parse_args()
 
     table = json.load(open(args.table, encoding='utf-8'))
-    entries = [(e["en"], e["zh-tw"]) for e in table if e.get("zh-tw") and e["zh-tw"] != e["en"]]
+    # 排除已在 NameTranslation 的 key（物品/NPC/Loc 名由 NameTranslation 提供，避免 LLM 的不一致譯名覆蓋）
+    nt_keys = set()
+    if args.name_translation and os.path.exists(args.name_translation):
+        nt = open(args.name_translation, encoding='utf-8').read()
+        for m in re.finditer(r'static final String D\w*\s*=\s*"((?:[^"\\]|\\.)*)"', nt, re.S):
+            data = m.group(1).replace('\\u0000', '\u0000')
+            parts = data.split('\u0000')
+            for i in range(0, len(parts) - 1, 2):
+                nt_keys.add(parts[i])
+    entries = [(e["en"], e["zh-tw"]) for e in table if e.get("zh-tw") and e["zh-tw"] != e["en"] and e["en"] not in nt_keys]
     seen = set()
     uniq = []
     for en, zh in entries:
@@ -46,7 +59,7 @@ def main():
             continue
         seen.add(en)
         uniq.append((en, zh))
-    print(f"有效翻譯: {len(uniq)}")
+    print(f"有效翻譯: {len(uniq)}（排除 NameTranslation 既有 {len(entries) - len(uniq)} 條）")
 
     # 切成多個 chunk
     chunks = [uniq[i:i + CHUNK] for i in range(0, len(uniq), CHUNK)]

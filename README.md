@@ -12,7 +12,7 @@
 | [2009scape-zh-tw-server](https://gitlab.com/2009scape/2009scape) | 官方伺服器 `zh-tw` 分支 | Translation 攔截器 |
 | **2009scape-zh-tw**（本 repo） | - | 翻譯表、術語表、萃取/建置工具 |
 
-本機三個 repo 平級放置（如 `2009scape-zh-tw-workspace/`），工具腳本預設從
+工具腳本預設從
 `../rt4-client-zh-tw`、`../2009scape-zh-tw-server` 建置。
 
 ## 功能

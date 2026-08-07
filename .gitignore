@@ -39,4 +39,6 @@ Thumbs.db
 *.local
 
 # dev dependency
+tmp/__pycache__/
+*.pyc
 tmp/
