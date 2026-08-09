@@ -37,6 +37,16 @@ FRAG = re.compile(r'\!\!|\?\?|no definitions|stairs|Insufficient array|account, 
                   r'|et Daconia|you pleadingly|I took the research package|total XP')
 
 
+def _tag_balanced(s):
+    """檢查關鍵標籤 <col>/<str>/<red>/<blue>/<img> 開閉是否平衡（平衡 = 完整段落非片段）。"""
+    for tag in ('col', 'str', 'red', 'blue', 'img'):
+        o = len(re.findall(r'<' + tag + r'(?:=[0-9A-Fa-f]+)?>', s, re.I))
+        c = len(re.findall(r'</' + tag + '>', s, re.I))
+        if o != c:
+            return False
+    return True
+
+
 def looks_translatable(s):
     """是否為值得翻譯的完整英文句子（非程式碼/咒語/碎片/片段）。"""
     s = s.strip()
@@ -48,8 +58,12 @@ def looks_translatable(s):
         return False
     if re.match(r'^[A-Za-z]+ ?\d+$', s):
         return False
-    # 只報「完整句子」（以句號/問號/感嘆號結尾），排除多行對話片段
-    if not re.search(r'[.?!。！？]["\']?\s*$', s):
+    # 只報「完整句子」：含 <col> 平衡標籤的任務日誌（完整 key）不要求句號；
+    # 純文字則要求以句號/問號/感嘆號結尾（排除多行對話片段）
+    if '<col' in s or '<str' in s:
+        if not _tag_balanced(s):
+            return False
+    elif not re.search(r'[.?!。！？]["\']?\s*$', s):
         return False
     return True
 
