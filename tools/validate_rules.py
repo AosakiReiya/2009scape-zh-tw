@@ -116,19 +116,21 @@ def check_entry(en, zh, name_map, glossary):
                    or en in name_map)                        # 名稱（ObjType 加括號）
         if not allowed:
             issues.append(('R1', '譯文無中文字元（且非咒語/程式碼）'))
-    # R6 長度合理（長 key → 過短譯文）
+    # R6 長度合理（長 key → 過短或未翻譯譯文；允許「期票」精簡翻譯與擬聲/標點變體）
     plain_en = len(re.sub(r'<[^>]+>', '', en))
-    plain_zh = len(re.sub(r'<[^>]+>', '', zh))
-    if plain_en >= 15 and plain_zh <= 2:
-        issues.append(('R6', f'長 key({plain_en})→過短譯文({plain_zh})'))
+    plain_zh = re.sub(r'<[^>]+>', '', zh)
+    if plain_en >= 15 and (len(plain_zh) <= 1
+                           or (not CJK.search(plain_zh) and plain_zh == plain_en)):
+        issues.append(('R6', f'長 key({plain_en})→未譯/過短({len(plain_zh)})'))
     # R3 標籤保留（關鍵標籤 <col>/<img>/<str>/<u> 完全一致；<br> 允許排版差異）
     # 若 key 的關鍵標籤開閉不平衡（截斷片段/長段落），標籤比對不可靠，跳過
+    # 只報「key 有而譯文遺失」的標籤；譯文自行加色標籤屬 UI 強化，允許
     if not _tag_balanced(en):
         pass
     else:
         kt = sorted(KEY_TAG.findall(en))
         vt = sorted(KEY_TAG.findall(zh))
-        if kt != vt:
+        if kt != vt and any(kt.count(t) > vt.count(t) for t in set(kt)):
             issues.append(('R3', f'關鍵標籤不一致  K{kt} vs V{vt}'))
     # R4 術語統一：譯文不得殘留 glossary 英文原詞（完整詞匹配）
     # 效能：譯文若無英文字母（純中文）不會有術語殘留，直接跳過
