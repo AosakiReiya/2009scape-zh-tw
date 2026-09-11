@@ -46,12 +46,12 @@ def main():
                     if q: segs.append(q.group(1).replace('\\"','"').replace('\\n',' ').strip())
                     else:
                         if re.search(r'[A-Za-z_$.]',tk): segs.append('VAR'); nvar+=1
-                if nvar==0 or nvar>2: skip+= (1 if nvar>2 else 0); continue
+                if nvar==0 or nvar>3: skip+= (1 if nvar>3 else 0); continue
                 litl=[s for s in segs if s!='VAR']
                 if not all(litl) or any(EX.search(x) for x in litl): skip+=1; continue
                 if any(not re.search(r'[A-Za-z]',x) for x in litl): continue
                 # 佔位 pseudo：VAR 槽放 {X}/{Y}
-                PH=['{X}','{Y}']; vi=0; pseudo=[]
+                PH=['{X}','{Y}','{Z}']; vi=0; pseudo=[]
                 for seg in segs:
                     if seg=='VAR': pseudo.append(PH[vi]); vi+=1
                     else: pseudo.append(seg)
@@ -63,11 +63,15 @@ def main():
                     if len(pre)<6 or len(suf)<3: skip+=1; continue
                     key=f'@pre:{pre}~~{suf}'
                 else:
-                    # 2 var: key = lit0 $a lit1 $b lit2 (僅取含 3 段字串 0VAR1VAR2)
-                    if segs.count('VAR')!=2 or len(litl)!=3: skip+=1; continue
-                    p0,p1,p2=litl
-                    if len(p0)<5 or len(p1)<3 or len(p2)<3: skip+=1; continue
-                    key=f'{p0} $a {p1} $b {p2}'
+                    # nvar>=2: key 依 segs 順序，VAR→ $a/$b/$c，字串原樣
+                    if segs[0]=='VAR' or segs[-1]=='VAR': skip+=1; continue  # 首尾須靜態
+                    if any(s=='VAR' for s in segs[:-1] if False): pass
+                    tags=['$a','$b','$c']; vi=0; kb=[]
+                    for sg in segs:
+                        if sg=='VAR': kb.append(tags[vi]); vi+=1
+                        else: kb.append(sg)
+                    key=' '.join(kb)
+                    if key.count('$')<2 or len(key)<14: skip+=1; continue
                 if len(pseudo)<12 or key in seen: continue
                 if re.search(r'[\u4e00-\u9fff]',pseudo): continue
                 seen.add(key); out.append({'key':key,'en':pseudo})
