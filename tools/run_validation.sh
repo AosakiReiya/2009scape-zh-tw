@@ -9,14 +9,38 @@ SERVER_SRC=${SERVER_SRC:-../2009scape-zh-tw-server/Server/src/main}
 NAME_SRC=${NAME_SRC:-../rt4-client-zh-tw/client/src/main/java/rt4/NameTranslation.java}
 GLOSSARY=${GLOSSARY:-translations/glossary.tsv}
 
+TABLE=${TABLE:-$GAME/data/configs/translations_zh-tw.json}
+# @pre 動態模板數量基線：低於此值即視為「清理誤刪模板」回歸（靜態完整性抓不到 @pre）。
+PRE_MIN=${PRE_MIN:-50}
+
 echo "========================================="
-echo " 漢化驗證（規則 + 完整性）"
+echo " 漢化驗證（表不變量 + 規則 + 完整性）"
 echo "========================================="
 
 echo ""
-echo "[1/2] 規則驗證（0 違規才算通過）..."
+echo "[1/3] 表不變量檢查（@pre 動態模板不被誤刪）..."
+python3 - "$TABLE" "$PRE_MIN" <<'PYEOF'
+import json, sys, re
+table_path, pre_min = sys.argv[1], int(sys.argv[2])
+s = json.load(open(table_path, encoding='utf-8'))
+pre = {k: v for k, v in s.items() if k.startswith('@pre:')}
+bad = [k for k in pre if '~~' not in k[5:] or '~~' not in pre[k] or '英文前綴' in k or pre[k].strip() == k.strip()]
+print(f"  @pre 模板數: {len(pre)} (基線 >= {pre_min})")
+if bad:
+    print(f"  ❌ 壞的 @pre ({len(bad)}): " + ", ".join(repr(k[:40]) for k in bad[:10]))
+if len(pre) < pre_min:
+    print(f"  ❌ @pre 數量低於基線，疑似清理誤刪動態模板")
+if len(pre) >= pre_min and not bad:
+    print("  ✅ 通過")
+    sys.exit(0)
+sys.exit(1)
+PYEOF
+INVARIANT=$?
+
+echo ""
+echo "[2/3] 規則驗證（0 違規才算通過）..."
 python3 tools/validate_rules.py \
-  --json "$GAME/data/configs/translations_zh-tw.json" \
+  --json "$TABLE" \
   --tbl "$GAME/translations_client.tbl" \
   --glossary "$GLOSSARY" \
   --name "$NAME_SRC" \
@@ -24,10 +48,10 @@ python3 tools/validate_rules.py \
 RULES=$?
 
 echo ""
-echo "[2/2] 完整性驗證（0 漏翻才算通過）..."
+echo "[3/3] 完整性驗證（0 漏翻才算通過）..."
 python3 tools/validate_completeness.py \
   --server-src "$SERVER_SRC" \
-  --json "$GAME/data/configs/translations_zh-tw.json" \
+  --json "$TABLE" \
   --tbl "$GAME/translations_client.tbl" \
   --name "$NAME_SRC" \
   --report /tmp/validate_completeness_report.txt
@@ -35,11 +59,11 @@ COMPLETE=$?
 
 echo ""
 echo "========================================="
-if [ $RULES -eq 0 ] && [ $COMPLETE -eq 0 ]; then
-  echo " ✅ 漢化驗證通過：規則 0 違規 + 完整性 0 漏翻"
+if [ $INVARIANT -eq 0 ] && [ $RULES -eq 0 ] && [ $COMPLETE -eq 0 ]; then
+  echo " ✅ 漢化驗證通過：表不變量 OK + 規則 0 違規 + 完整性 0 漏翻"
   exit 0
 else
-  echo " ❌ 未通過：規則=$([ $RULES -eq 0 ] && echo OK || echo FAIL) 完整性=$([ $COMPLETE -eq 0 ] && echo OK || echo FAIL)"
+  echo " ❌ 未通過：不變量=$([ $INVARIANT -eq 0 ] && echo OK || echo FAIL) 規則=$([ $RULES -eq 0 ] && echo OK || echo FAIL) 完整性=$([ $COMPLETE -eq 0 ] && echo OK || echo FAIL)"
   echo "    報告：/tmp/validate_rules_report.txt、/tmp/validate_completeness_report.txt"
   echo "    修繕後重跑本腳本直至通過。"
   exit 1
