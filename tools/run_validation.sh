@@ -18,11 +18,11 @@ TABLE=${TABLE:-$GAME/data/configs/translations_zh-tw.json}
 PRE_MIN=${PRE_MIN:-50}
 
 echo "========================================="
-echo " 漢化驗證（表不變量 + 規則 + 完整性 + 客戶端覆蓋 + 對白）"
+echo " 漢化驗證（不變量+規則+完整性+客戶端+對白+夾雜率）"
 echo "========================================="
 
 echo ""
-echo "[1/5] 表不變量檢查（@pre 動態模板不被誤刪）..."
+echo "[1/6] 表不變量檢查（@pre 動態模板不被誤刪）..."
 python3 - "$TABLE" "$PRE_MIN" <<'PYEOF'
 import json, sys, re
 table_path, pre_min = sys.argv[1], int(sys.argv[2])
@@ -42,7 +42,7 @@ PYEOF
 INVARIANT=$?
 
 echo ""
-echo "[2/5] 規則驗證（0 違規才算通過）..."
+echo "[2/6] 規則驗證（0 違規才算通過）..."
 python3 tools/validate_rules.py \
   --json "$TABLE" \
   --tbl "$GAME/translations_client.tbl" \
@@ -52,7 +52,7 @@ python3 tools/validate_rules.py \
 RULES=$?
 
 echo ""
-echo "[3/5] 完整性驗證（0 漏翻才算通過）..."
+echo "[3/6] 完整性驗證（0 漏翻才算通過）..."
 python3 tools/validate_completeness.py \
   --server-src "$SERVER_SRC" \
   --json "$TABLE" \
@@ -62,7 +62,7 @@ python3 tools/validate_completeness.py \
 COMPLETE=$?
 
 echo ""
-echo "[4/5] 客戶端快取覆蓋驗證（介面/CS2/NPC/物品名不被漏）..."
+echo "[4/6] 客戶端快取覆蓋驗證（介面/CS2/NPC/物品名不被漏）..."
 python3 tools/validate_client_names.py \
   --cache "$CACHE" \
   --client-src "$CLIENT_SRC" \
@@ -72,7 +72,7 @@ python3 tools/validate_client_names.py \
 CLIENT=$?
 
 echo ""
-echo "[5/5] 對白/訊息覆蓋掃描（content 整句缺 key）..."
+echo "[5/6] 對白/訊息覆蓋掃描（content 整句缺 key）..."
 python3 tools/content_dialogue_scan.py \
   --src "$SERVER_SRC2" \
   --json "$TABLE" \
@@ -81,9 +81,14 @@ python3 tools/content_dialogue_scan.py \
 DIALOG=$?
 
 echo ""
+echo "[6/6] 夾雜率指標（可見譯文殘留英文率，<= ${MIX_MAX:-3}%）..."
+python3 tools/zh_coverage_metric.py
+METRIC=$?
+
+echo ""
 echo "========================================="
-if [ $INVARIANT -eq 0 ] && [ $RULES -eq 0 ] && [ $COMPLETE -eq 0 ] && [ $CLIENT -eq 0 ] && [ $DIALOG -eq 0 ]; then
-  echo " ✅ 漢化驗證通過：表不變量 OK + 規則 0 違規 + 完整性 0 漏翻 + 客戶端覆蓋 OK + 對白達標"
+if [ $INVARIANT -eq 0 ] && [ $RULES -eq 0 ] && [ $COMPLETE -eq 0 ] && [ $CLIENT -eq 0 ] && [ $DIALOG -eq 0 ] && [ $METRIC -eq 0 ]; then
+  echo " ✅ 漢化驗證通過：表不變量 OK + 規則 0 違規 + 完整性 0 漏翻 + 客戶端覆蓋 OK + 對白達標 + 夾雜率 OK"
   exit 0
 else
   echo " ❌ 未通過：不變量=$([ $INVARIANT -eq 0 ] && echo OK || echo FAIL) 規則=$([ $RULES -eq 0 ] && echo OK || echo FAIL) 完整性=$([ $COMPLETE -eq 0 ] && echo OK || echo FAIL) 客戶端=$([ $CLIENT -eq 0 ] && echo OK || echo FAIL) 對白=$([ $DIALOG -eq 0 ] && echo OK || echo FAIL)"
