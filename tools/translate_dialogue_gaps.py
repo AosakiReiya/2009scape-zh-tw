@@ -14,9 +14,10 @@ def clean(s):
     if re.match(r'^(else|return|if|null|this|new|for|while|var|val|fun|void|private|public|static)\b',s): return ''
     if re.search(r'[{}]|=>|^\W{3,}',s): return ''
     return s
+LOWLAT=re.compile(r'[a-z]{4,}')   # 小寫英文詞=真的未翻；大寫專名交給 NAME_BI，允許
 def residual_english(zh):
-    t=re.sub(r'\([^()]*\)|（[^()]*）',' ',zh); t=ALLOWED.sub(' ',t)
-    return bool(LAT.search(t))
+    t=re.sub(r'\([^()]*\)|（[^()]*）',' ',zh); t=ALLOWED.sub(' ',t); t=re.sub(r'[A-Za-z]{1,3}\b',' ',t)  # 放行短縮寫
+    return bool(LOWLAT.search(t))
 def load_gloss(p):
     g={}
     if p and os.path.exists(p):

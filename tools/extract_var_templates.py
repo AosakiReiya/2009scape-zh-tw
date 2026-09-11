@@ -27,7 +27,7 @@ def balanced_args(src,op):
 EX=re.compile(r"Can't locate|Initialized|Loaded|Error!|register|drop|INSERT|SELECT|CREATE|DELETE|WHERE|\.dat|System\.|Exception|config length|walkable|TODO",re.I)
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--src',required=True); ap.add_argument('--emit',required=True); a=ap.parse_args()
-    items=[]; seen=set(); skip_multi=0
+    out=[]; seen=set(); skip=0
     for dp,_,fs in os.walk(a.src):
         if '/build/' in dp: continue
         for fn in fs:
@@ -38,23 +38,39 @@ def main():
             for m in CALL.finditer(src):
                 op=src.index('(',m.start()); args=balanced_args(src,op)
                 if not args or '+' not in args: continue
-                lits=[l.replace('\\"','"').replace('\\n',' ').strip() for l in CSTR.findall(args)]
-                lits=[l for l in lits if l]
-                # 計算變數槽：args 去掉字串後的 '+' 連線片段數
-                stripped=CSTR.sub('§',args)
-                nvar=stripped.count('§')-1 if stripped.count('§')>=2 else 0
-                # 只取 恰好 2 段靜態 + 1 變數（prefix + x + suffix）
-                if len(lits)!=2:
-                    if len(lits)>2: skip_multi+=1
-                    continue
-                prefix,suffix=lits
-                if len(prefix)<6 or len(suffix)<3: continue   # 前後綴太短不穩
-                if EX.search(prefix+suffix): continue
-                if re.search(r'[\u4e00-\u9fff]',prefix+suffix): continue
-                key=f'@pre:{prefix}~~{suffix}'
-                if key in seen: continue
-                seen.add(key); items.append(key)
-    json.dump([{'en':k,'zh-tw':'','source':'var_template','status':'untranslated'} for k in items],
-              open(a.emit,'w',encoding='utf-8'),ensure_ascii=False,indent=1)
-    print(f'可安全模板化(單變數前后綴) : {len(items)} | 跳過(多段/名稱/其他) : {skip_multi}')
+                # 依頂層 + 切成 token 序列，標記字串/非字串(var)
+                toks=re.split(r'(?<=[^"])\s*\+\s*(?=[^"])',args)  # 粗略
+                segs=[]; nvar=0
+                for tk in toks:
+                    q=re.fullmatch(r'\s*"((?:[^"\\]|\\.)*)"\s*',tk)
+                    if q: segs.append(q.group(1).replace('\\"','"').replace('\\n',' ').strip())
+                    else:
+                        if re.search(r'[A-Za-z_$.]',tk): segs.append('VAR'); nvar+=1
+                if nvar==0 or nvar>2: skip+= (1 if nvar>2 else 0); continue
+                litl=[s for s in segs if s!='VAR']
+                if not all(litl) or any(EX.search(x) for x in litl): skip+=1; continue
+                if any(not re.search(r'[A-Za-z]',x) for x in litl): continue
+                # 佔位 pseudo：VAR 槽放 {X}/{Y}
+                PH=['{X}','{Y}']; vi=0; pseudo=[]
+                for seg in segs:
+                    if seg=='VAR': pseudo.append(PH[vi]); vi+=1
+                    else: pseudo.append(seg)
+                pseudo=' '.join(pseudo).replace('  ',' ').strip()
+                if nvar==1:
+                    pre,suf=(segs[0] if segs[0]!='VAR' else ''), (segs[-1] if segs[-1]!='VAR' else '')
+                    if len(segs)==2:  # var 在前: @pre enPre='' 會過度匹配 → 跳過
+                        continue
+                    if len(pre)<6 or len(suf)<3: skip+=1; continue
+                    key=f'@pre:{pre}~~{suf}'
+                else:
+                    # 2 var: key = lit0 $a lit1 $b lit2 (僅取含 3 段字串 0VAR1VAR2)
+                    if segs.count('VAR')!=2 or len(litl)!=3: skip+=1; continue
+                    p0,p1,p2=litl
+                    if len(p0)<5 or len(p1)<3 or len(p2)<3: skip+=1; continue
+                    key=f'{p0} $a {p1} $b {p2}'
+                if len(pseudo)<12 or key in seen: continue
+                if re.search(r'[\u4e00-\u9fff]',pseudo): continue
+                seen.add(key); out.append({'key':key,'en':pseudo})
+    json.dump(out,open(a.emit,'w',encoding='utf-8'),ensure_ascii=False,indent=1)
+    print(f'模板候選: {len(out)} (含1變數@pre + 2變數$a/$b) | 跳過: {skip}')
 main() if __name__=='__main__' else None

@@ -72,6 +72,12 @@ def scan(root, cov):
                         var_gap+=1
                     continue
                 joined=' '.join(lits).strip()
+                j=joined
+                j=re.sub(r'^[)\}\s]+','',j).strip()          # 剝 ${...} 閉合括弧雜訊
+                j=re.sub(r'^else\s+[)}]*\s*','',j)             # 剝 else 分支前綴
+                if re.match(r'^(else|return|if|null|this|new|for|while|var|val|fun)\b',j) or re.search(r'[{}]|=>',j):
+                    continue
+                joined=j
                 if len(joined)<10 or CJK.search(joined) or not re.search(r'[A-Za-z]{3,} [A-Za-z]',joined) or SPELL.match(joined):
                     continue
                 # 整句已在表 or 每個片段都在表 → OK（引擎兩者皆可命中）
