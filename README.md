@@ -13,7 +13,10 @@
 | **2009scape-zh-tw**（本 repo） | - | 翻譯表、術語表、萃取/建置工具 | 不發佈二進位檔 |
 
 一般玩家請直接到 [rt4-client-zh-tw Releases](https://github.com/AosakiReiya/rt4-client-zh-tw/releases) 下載
-`2009scape-zh-tw-singleplayer-win64.zip`（免安裝、內含 Java，解壓雙擊 `start-game.bat` 即玩）。
+`2009scape-zh-tw-singleplayer-win64.zip`（或 `linux64`）：一鍵離線單機包，內含漢化伺服器、客戶端、遊戲 cache 與 Java，
+解壓後雙擊 `start-game.bat` 即玩，不用另外架伺服器或設定連線。
+
+詞表由本地 LLM（gemma）批次翻譯、術語表約束一致性，未逐條人工審校；誤翻、漏翻、術語不一致歡迎開 issue 回報。
 
 發佈方式：在上述兩個 fork repo 打 `v*` tag，GitHub Actions 自動編譯並建立 Release
 （順序：先 server、後 client；單機包會抓取 server 的 latest release 組裝）。
