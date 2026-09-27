@@ -6,11 +6,18 @@
 
 漢化以 fork 形式維護。本 repo 為「門戶」，串接兩個 fork：
 
-| repo | 基底 | 內容 |
-|---|---|---|
-| [rt4-client-zh-tw](https://gitlab.com/2009scape/rt4-client) | 官方用戶端 `zh-tw` 分支 | JagString UTF-16 + CJKRenderer + Font 改造 |
-| [2009scape-zh-tw-server](https://gitlab.com/2009scape/2009scape) | 官方伺服器 `zh-tw` 分支 | Translation 攔截器 |
-| **2009scape-zh-tw**（本 repo） | - | 翻譯表、術語表、萃取/建置工具 |
+| repo | 基底 | 內容 | 發佈 |
+|---|---|---|---|
+| [rt4-client-zh-tw](https://github.com/AosakiReiya/rt4-client-zh-tw) | 官方用戶端 `zh-tw` 分支 | JagString UTF-16 + CJKRenderer + Font 改造 | [Releases](https://github.com/AosakiReiya/rt4-client-zh-tw/releases)：客戶端 jar + **一鍵離線單機包**（win/linux） |
+| [2009scape-zh-tw-server](https://github.com/AosakiReiya/2009scape-zh-tw-server) | 官方伺服器 `zh-tw` 分支 | Translation 攔截器、漢化 configs | [Releases](https://github.com/AosakiReiya/2009scape-zh-tw-server/releases)：server jar + 漢化 data |
+| **2009scape-zh-tw**（本 repo） | - | 翻譯表、術語表、萃取/建置工具 | 不發佈二進位檔 |
+
+一般玩家請直接到 [rt4-client-zh-tw Releases](https://github.com/AosakiReiya/rt4-client-zh-tw/releases) 下載
+`2009scape-zh-tw-singleplayer-win64.zip`（免安裝、內含 Java，解壓雙擊 `start-game.bat` 即玩）。
+
+發佈方式：在上述兩個 fork repo 打 `v*` tag，GitHub Actions 自動編譯並建立 Release
+（順序：先 server、後 client；單機包會抓取 server 的 latest release 組裝）。
+基底來源為官方 <https://gitlab.com/2009scape>（rt4-client、2009scape、singleplayer/windows）。
 
 工具腳本預設從
 `../rt4-client-zh-tw`、`../2009scape-zh-tw-server` 建置。
